@@ -15,7 +15,9 @@ public class VillagerGather : MonoBehaviour {
     public bool gathering;
     public bool building;
     public bool enrouteToBuilding;
-    
+    private ProgressBar progressBar;
+    private GameObject progressBarObject;
+
     // Classes
 
     private DataHolder dataHolder;
@@ -27,6 +29,8 @@ public class VillagerGather : MonoBehaviour {
     private void Awake() {
         animator = gameObject.GetComponent<Animator>();
         stats = gameObject.GetComponent<VillagerStats>();
+        progressBarObject = gameObject.transform.GetChild(1).gameObject;
+        progressBar = progressBarObject.GetComponent<ProgressBar>();
     }
 
     private void Start() {
@@ -38,6 +42,13 @@ public class VillagerGather : MonoBehaviour {
 
     private void Update() {
         if (gathering) {
+            
+            // Set progress bar
+
+           // Debug.Log("time: " + Time.time);
+            float percent = (1 - (timeGatheringStarted + dataHolder.workerGatherTime - Time.time) / 2) * 100;
+            progressBar.setPercent(Mathf.RoundToInt(percent));
+
             if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
                 // Finish a round of gathering
                 resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType), 1);
@@ -92,6 +103,7 @@ public class VillagerGather : MonoBehaviour {
             // Gather resources
             if (buildingController.currentResourcesHeld > 0) {
                 buildingController.currentResourcesHeld--;
+                progressBarObject.SetActive(true);
                 gathering = true;
                 timeGatheringStarted = Time.time;
                 animator.SetBool("working", true);
@@ -105,6 +117,7 @@ public class VillagerGather : MonoBehaviour {
     private void doneGathering() {
         animator.SetBool("working", false);
         gathering = false;
+        progressBarObject.SetActive(false);
     }
 
     private void doneBuilding() {

@@ -31,6 +31,44 @@ public class ProgressBar : MonoBehaviour {
     
     // Public Functions
 
+    public void setPercent(int newAmount) {
+        percent = newAmount;
+        
+        if (percent < 10) {
+            renderer.sprite = zero;
+        }
+        else if (percent < 20) {
+            renderer.sprite = one;
+        }
+        else if (percent < 30) {
+            renderer.sprite = two;
+        }
+        else if (percent < 40) {
+            renderer.sprite = three;
+        }
+        else if (percent < 50) {
+            renderer.sprite = four;
+        }
+        else if (percent < 60) {
+            renderer.sprite = five;
+        }
+        else if (percent < 70) {
+            renderer.sprite = six;
+        }
+        else if (percent < 80) {
+            renderer.sprite = seven;
+        }
+        else if (percent < 90) {
+            renderer.sprite = eight;
+        }
+        else if (percent < 100) {
+            renderer.sprite = nine;
+        }
+        else {
+            renderer.sprite = ten;
+        }
+    }
+    
     public void adjustPercent(int amount) {
         percent += amount;
 
