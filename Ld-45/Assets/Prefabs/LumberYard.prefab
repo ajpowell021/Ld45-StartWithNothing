@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6768629274477910677}
   - component: {fileID: 5104067428793041319}
   - component: {fileID: 1698010141564321583}
+  - component: {fileID: 2988339227584768414}
   m_Layer: 0
   m_Name: LumberYard
   m_TagString: Building
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2988339227584768414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6940309024229694430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be73f56ede4be7848bc979d3c528e120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentResourcesHeld: 0

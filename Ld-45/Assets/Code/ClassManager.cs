@@ -19,6 +19,7 @@ public class ClassManager : MonoBehaviour {
     public PrefabManager prefabManager;
     public HudController hudController;
     public CursorManager cursorManager;
+    public ResourceManager resourceManager;
     
     // Init
 
@@ -50,5 +51,6 @@ public class ClassManager : MonoBehaviour {
         prefabManager = gameObject.GetComponent<PrefabManager>();
         hudController = gameObject.GetComponent<HudController>();
         cursorManager = gameObject.GetComponent<CursorManager>();
+        resourceManager = gameObject.GetComponent<ResourceManager>();
     }
 }

@@ -14,3 +14,10 @@ public enum InputMode {
     Build
 }
 
+public enum ResourceType {
+    Wood,
+    Stone,
+    Food,
+    Cotton
+}
+
