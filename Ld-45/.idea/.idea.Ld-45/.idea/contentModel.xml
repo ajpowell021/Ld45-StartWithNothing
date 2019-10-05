@@ -10,6 +10,7 @@
           <e p="AnimationDestroyer.cs" t="Include" />
           <e p="BuildingButton.cs" t="Include" />
           <e p="BuildingController.cs" t="Include" />
+          <e p="BuildingSiteController.cs" t="Include" />
           <e p="ClassManager.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
           <e p="CursorObjectHitDetector.cs" t="Include" />

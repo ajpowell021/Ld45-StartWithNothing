@@ -15,6 +15,7 @@ public class PrefabManager : MonoBehaviour {
     public GameObject mine;
     public GameObject lumberYard;
     public GameObject house;
+    public GameObject buildingSite;
     
     // Public Functions
 
@@ -28,6 +29,8 @@ public class PrefabManager : MonoBehaviour {
                 return mine;
             case BuildingType.House:
                 return house;
+            case BuildingType.BuildingSite:
+                return buildingSite;
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }

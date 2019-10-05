@@ -8,9 +8,12 @@ public class VillagerGather : MonoBehaviour {
     // Private State
 
     private BuildingController buildingController;
+    private BuildingSiteController buildingSiteController;
     private Animator animator;
     private float timeGatheringStarted;
+    private float timeBuildingStarted;
     public bool gathering;
+    public bool building;
     
     // Classes
 
@@ -47,6 +50,18 @@ public class VillagerGather : MonoBehaviour {
                 }
             }
         }
+        else if (building) {
+            if (Time.time > timeBuildingStarted + dataHolder.workerGatherTime) {
+                // Finish a round of building
+                if (buildingSiteController.donePercent == 100) {
+                    doneBuilding();
+                }
+                else {
+                    timeBuildingStarted = Time.time;
+                    buildingSiteController.doWork();
+                }
+            }
+        }
     }
 
     // Public Functions
@@ -55,13 +70,38 @@ public class VillagerGather : MonoBehaviour {
         buildingController = controller;
     }
 
+    public void setBuildingSiteController(BuildingSiteController controller) {
+        buildingSiteController = controller;
+        building = true;
+    }
+
     public void arrivedAtBuilding() {
-        if (buildingController.currentResourcesHeld > 0) {
-            buildingController.currentResourcesHeld--;
-            gathering = true;
-            timeGatheringStarted = Time.time;
-            animator.SetBool("working", true);
-            stats.setSelected(false);
+        if (building) {
+            // Work on building
+            //if (buildingController != null) {
+                if (buildingSiteController.donePercent < 100) {
+                    buildingSiteController.doWork();
+                    timeBuildingStarted = Time.time;
+                    animator.SetBool("working", true);
+                    stats.setSelected(false);
+                }    
+            //}
+//            else {
+//                Debug.Log("what");
+//                // Building was finished while enroute.
+//                doneBuilding();
+//                stats.setSelected(false);
+//            }
+        }
+        else {
+            // Gather resources
+            if (buildingController.currentResourcesHeld > 0) {
+                buildingController.currentResourcesHeld--;
+                gathering = true;
+                timeGatheringStarted = Time.time;
+                animator.SetBool("working", true);
+                stats.setSelected(false);
+            }
         }
     }
     
@@ -70,6 +110,11 @@ public class VillagerGather : MonoBehaviour {
     private void doneGathering() {
         animator.SetBool("working", false);
         gathering = false;
+    }
+
+    private void doneBuilding() {
+        animator.SetBool("working", false);
+        building = false;
     }
 
     private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType) {

@@ -2025,6 +2025,8 @@ MonoBehaviour:
   lumberYard: {fileID: 6940309024229694430, guid: 284ed232fa28e8d49bb626292e004edc,
     type: 3}
   house: {fileID: 7785624367075556489, guid: c5bda65d15c953b4b959249ca5788fbe, type: 3}
+  buildingSite: {fileID: 5233533482381427392, guid: 263c4be30ead1bc47b909c047b3abac2,
+    type: 3}
 --- !u!114 &1778255549
 MonoBehaviour:
   m_ObjectHideFlags: 0

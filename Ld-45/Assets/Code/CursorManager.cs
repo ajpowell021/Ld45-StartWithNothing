@@ -72,7 +72,10 @@ public class CursorManager : MonoBehaviour {
     public void buildTheBuildingOnCursor() {
         if (canBuild) {
             // Create building at point that cursor object is.
-            Instantiate(prefabManager.getPrefabFromBuildingType(typeOnCursor), cursorObject.transform.position, Quaternion.identity);
+            //Instantiate(prefabManager.getPrefabFromBuildingType(typeOnCursor), cursorObject.transform.position, Quaternion.identity);
+            GameObject buildingSite = Instantiate(prefabManager.getPrefabFromBuildingType(BuildingType.BuildingSite), cursorObject.transform.position, Quaternion.identity);
+            BuildingSiteController controller = buildingSite.GetComponent<BuildingSiteController>();
+            controller.setBuildingType(typeOnCursor);
             // Hide cursor object.
             cursorObject.SetActive(false);
             // Reset vars

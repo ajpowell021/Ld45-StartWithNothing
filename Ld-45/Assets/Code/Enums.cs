@@ -6,7 +6,8 @@ public enum BuildingType {
     LumberYard,
     Farm,
     Mine,
-    House
+    House,
+    BuildingSite
 }
 
 public enum InputMode {

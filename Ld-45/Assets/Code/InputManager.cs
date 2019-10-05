@@ -76,6 +76,21 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void buildingSiteClicked(BuildingSiteController controller) {
+        int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+        if (selectedVillagerCount > 0) {
+            // Work on the site
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(controller.gameObject.transform.position, true);
+                movers[i].GetComponent<VillagerGather>().setBuildingSiteController(controller);
+            }
+        }
+        else {
+            
+        }
+    }
+
     public void setInputMode(InputMode mode) {
         inputMode = mode;
     }
