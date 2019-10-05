@@ -78,20 +78,12 @@ public class VillagerGather : MonoBehaviour {
     public void arrivedAtBuilding() {
         if (building) {
             // Work on building
-            //if (buildingController != null) {
-                if (buildingSiteController.donePercent < 100) {
-                    buildingSiteController.doWork();
-                    timeBuildingStarted = Time.time;
-                    animator.SetBool("working", true);
-                    stats.setSelected(false);
-                }    
-            //}
-//            else {
-//                Debug.Log("what");
-//                // Building was finished while enroute.
-//                doneBuilding();
-//                stats.setSelected(false);
-//            }
+            if (buildingSiteController.donePercent < 100) {
+                buildingSiteController.doWork();
+                timeBuildingStarted = Time.time;
+                animator.SetBool("working", true);
+                stats.setSelected(false);
+            }
         }
         else {
             // Gather resources

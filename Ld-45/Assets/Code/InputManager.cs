@@ -63,6 +63,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].move(building.gameObject.transform.position, true);
                 movers[i].GetComponent<VillagerGather>().setBuildingController(building);
             }
+            selectionManager.unselectAllVillagers();
         }
         else {
             if (building.selected) {
@@ -85,9 +86,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].move(controller.gameObject.transform.position, true);
                 movers[i].GetComponent<VillagerGather>().setBuildingSiteController(controller);
             }
-        }
-        else {
-            
+            selectionManager.unselectAllVillagers();
         }
     }
 

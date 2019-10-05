@@ -11,7 +11,7 @@ public class BuildingController : MonoBehaviour {
     public bool selected;
     public BuildingType buildingType;
     public int currentResourcesHeld;
-    
+
     // Private State
 
     private float timeOfLastHarvest;
@@ -20,7 +20,7 @@ public class BuildingController : MonoBehaviour {
     private GameObject radialOne;
     private GameObject radialTwo;
     private GameObject radialThree;
-    
+
     // Classes
 
     private DataHolder dataHolder;

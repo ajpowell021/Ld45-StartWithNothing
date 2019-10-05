@@ -20,6 +20,7 @@
           <e p="InputManager.cs" t="Include" />
           <e p="IslandClicker.cs" t="Include" />
           <e p="PrefabManager.cs" t="Include" />
+          <e p="ProgressBar.cs" t="Include" />
           <e p="RadialButtonController.cs" t="Include" />
           <e p="ResourceManager.cs" t="Include" />
           <e p="SelectionManager.cs" t="Include" />

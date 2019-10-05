@@ -14,8 +14,15 @@ public class BuildingSiteController : MonoBehaviour {
 
     private InputManager inputManager;
     private PrefabManager prefabManager;
+    private ProgressBar progressBar;
+    private SpriteRenderer spriteRenderer;
     
     // Init
+
+    private void Awake() {
+        progressBar = gameObject.GetComponentInChildren<ProgressBar>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
@@ -24,8 +31,10 @@ public class BuildingSiteController : MonoBehaviour {
 
     // Public Function
 
-    public void setBuildingType(BuildingType type) {
+    public IEnumerator setBuildingType(BuildingType type) {
+        yield return new WaitForFixedUpdate();
         buildingType = type;
+        spriteRenderer.sprite = prefabManager.getPrefabFromBuildingType(buildingType).GetComponent<SpriteRenderer>().sprite;
     }
 
     public void finishedBuilding() {
@@ -35,6 +44,7 @@ public class BuildingSiteController : MonoBehaviour {
 
     public void doWork() {
         donePercent += 10;
+        progressBar.adjustPercent(10);
         if (donePercent == 100) {
             finishedBuilding();
         }
