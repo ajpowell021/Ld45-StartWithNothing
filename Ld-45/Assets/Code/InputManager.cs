@@ -33,6 +33,8 @@ public class InputManager : MonoBehaviour {
         if (Input.GetMouseButton(1)) {
             selectionManager.unselectAllVillagers();
             selectionManager.unselectAllBuildings();
+            cursorManager.cancelBuild();
+            inputMode = InputMode.PeopleControl;
         } 
     }
 
@@ -63,7 +65,13 @@ public class InputManager : MonoBehaviour {
             }
         }
         else {
-            building.toggleBuildingSelect();
+            if (building.selected) {
+                building.toggleBuildingSelect();
+            }
+            else {
+                selectionManager.unselectAllBuildings();
+                building.toggleBuildingSelect();
+            }
             inputMode = !building.selected ? InputMode.PeopleControl : InputMode.BuidlingSelected;
         }
     }

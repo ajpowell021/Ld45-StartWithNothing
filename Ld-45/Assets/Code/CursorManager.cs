@@ -83,6 +83,15 @@ public class CursorManager : MonoBehaviour {
             Cursor.visible = true;
         }
     }
+
+    public void cancelBuild() {
+        if (onCursor) {
+            canBuild = false;
+            cursorObject.SetActive(false);
+            Cursor.visible = true;
+            onCursor = false;
+        }
+    }
     
     // Private Functions
 
