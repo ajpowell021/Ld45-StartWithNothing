@@ -214,8 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dfdbbf1663de9419a7d98ca8b3c42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Ghost
+  villagerName: 
   selected: 0
+  id: 0
 --- !u!114 &1744904687196980472
 MonoBehaviour:
   m_ObjectHideFlags: 0
