@@ -14,6 +14,7 @@ public class VillagerGather : MonoBehaviour {
     private float timeBuildingStarted;
     public bool gathering;
     public bool building;
+    public bool enrouteToBuilding;
     
     // Classes
 
@@ -72,17 +73,19 @@ public class VillagerGather : MonoBehaviour {
 
     public void setBuildingSiteController(BuildingSiteController controller) {
         buildingSiteController = controller;
-        building = true;
+        enrouteToBuilding = true;
     }
 
     public void arrivedAtBuilding() {
-        if (building) {
+        if (enrouteToBuilding) {
             // Work on building
             if (buildingSiteController.donePercent < 100) {
                 buildingSiteController.doWork();
+                building = true;
                 timeBuildingStarted = Time.time;
                 animator.SetBool("working", true);
                 stats.setSelected(false);
+                enrouteToBuilding = false;
             }
         }
         else {
