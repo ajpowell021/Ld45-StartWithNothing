@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,4 +9,30 @@ public class VillagerStats : MonoBehaviour {
 
     public string name;
     public bool selected;
+    
+    // Private State
+
+    private GameObject marqueeObject;
+    
+    // Init
+
+    private void Awake() {
+        marqueeObject = gameObject.transform.GetChild(0).gameObject;
+    }
+    
+    // Public Functions
+
+    public void setSelected(bool newSelected) {
+        selected = newSelected;
+        if (selected) {
+            marqueeObject.SetActive(true);
+        }
+        else {
+            marqueeObject.SetActive(false);
+        }
+    }
+
+    public void toggleSelected() {
+        setSelected(!selected);
+    }
 }

@@ -18,6 +18,6 @@ public class VillagerClicker : MonoBehaviour {
     // On Mouse Down
     
     private void OnMouseDown() {
-        villagerStats.selected = !villagerStats.selected;
+        villagerStats.toggleSelected();
     }
 }
