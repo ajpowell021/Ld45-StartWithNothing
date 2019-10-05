@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 1778255543}
   - component: {fileID: 1778255547}
   - component: {fileID: 1778255546}
+  - component: {fileID: 1778255548}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: GameManagers
@@ -516,6 +517,7 @@ MonoBehaviour:
   inputManager: {fileID: 0}
   dataHolder: {fileID: 0}
   selectionManager: {fileID: 0}
+  prefabManager: {fileID: 0}
 --- !u!4 &1778255545
 Transform:
   m_ObjectHideFlags: 0
@@ -555,3 +557,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   villagerSpeed: 10
+--- !u!114 &1778255548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778255542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec208e3c7ce784d4ea0595d48ed3e3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundClick: {fileID: 2226921057629221752, guid: a50f97a84fbc2434ab4797c64f0d24e8,
+    type: 3}

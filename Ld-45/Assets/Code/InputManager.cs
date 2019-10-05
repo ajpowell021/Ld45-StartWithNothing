@@ -8,11 +8,13 @@ public class InputManager : MonoBehaviour {
     // Classes
 
     private SelectionManager selectionManager;
+    private PrefabManager prefabManager;
     
     // Init
 
     private void Start() {
         selectionManager = ClassManager.instance.selectionManager;
+        prefabManager = ClassManager.instance.prefabManager;
     }
 
     // Public Functions
@@ -23,5 +25,7 @@ public class InputManager : MonoBehaviour {
         for (int i = 0; i < movers.Count; i++) {
              movers[i].move(position);
         }
+
+        Instantiate(prefabManager.groundClick, position, Quaternion.identity);
     }
 }
