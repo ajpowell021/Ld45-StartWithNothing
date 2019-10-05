@@ -7,4 +7,5 @@ public class PrefabManager : MonoBehaviour {
     // Public State
 
     public GameObject groundClick;
+    public GameObject selectorBox;
 }

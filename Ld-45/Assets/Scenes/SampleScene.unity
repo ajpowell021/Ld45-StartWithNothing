@@ -508,6 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundClick: {fileID: 2226921057629221752, guid: a50f97a84fbc2434ab4797c64f0d24e8,
     type: 3}
+  selectorBox: {fileID: 3173361407608479680, guid: e40b5a91378b28b48aac2383ecf88c8c,
+    type: 3}
 --- !u!1001 &1744904687467252353
 PrefabInstance:
   m_ObjectHideFlags: 0
