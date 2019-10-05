@@ -22,4 +22,15 @@ public class SelectionManager : MonoBehaviour {
 
         return selected;
     }
+
+    public List<VillagerMover> getSelectedVillagerMovers() {
+        List<VillagerMover> movers = new List<VillagerMover>();
+        List<GameObject> objects = getSelectedVillagerObjects();
+
+        for (int i = 0; i < objects.Count; i++) {
+            movers.Add(objects[i].GetComponent<VillagerMover>());
+        }
+
+        return movers;
+    }
 }
