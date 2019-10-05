@@ -10,7 +10,9 @@
           <e p="ClassManager.cs" t="Include" />
           <e p="DataHolder.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
+          <e p="SelectionManager.cs" t="Include" />
           <e p="VillagerMover.cs" t="Include" />
+          <e p="VillagerStats.cs" t="Include" />
         </e>
       </e>
       <e p="Ld-45.sln" t="IncludeFlat" />

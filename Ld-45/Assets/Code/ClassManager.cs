@@ -15,6 +15,7 @@ public class ClassManager : MonoBehaviour {
 
     public InputManager inputManager;
     public DataHolder dataHolder;
+    public SelectionManager selectionManager;
     
     // Init
 
@@ -42,5 +43,6 @@ public class ClassManager : MonoBehaviour {
     private void setClasses() {
         inputManager = gameObject.GetComponent<InputManager>();
         dataHolder = gameObject.GetComponent<DataHolder>();
+        selectionManager = gameObject.GetComponent<SelectionManager>();
     }
 }
