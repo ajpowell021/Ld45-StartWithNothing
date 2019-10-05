@@ -13,7 +13,8 @@ public class ClassManager : MonoBehaviour {
     
     // Classes
 
-    private InputManager inputManager;
+    public InputManager inputManager;
+    public DataHolder dataHolder;
     
     // Init
 
@@ -40,5 +41,6 @@ public class ClassManager : MonoBehaviour {
 
     private void setClasses() {
         inputManager = gameObject.GetComponent<InputManager>();
+        dataHolder = gameObject.GetComponent<DataHolder>();
     }
 }
