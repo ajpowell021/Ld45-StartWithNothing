@@ -10,4 +10,5 @@ public class DataHolder : MonoBehaviour {
     public float buildingResourceGatheringSpeed;
     public int buildingResourceCapacity;
     public int workerGatherTime;
+    public float mouseDragCooldown;
 }

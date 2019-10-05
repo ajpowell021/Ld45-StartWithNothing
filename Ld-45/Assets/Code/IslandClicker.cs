@@ -10,6 +10,7 @@ public class IslandClicker : MonoBehaviour {
     private InputManager inputManager;
     private SelectionManager selectionManager;
     private PrefabManager prefabManager;
+    private DataHolder dataHolder;
     
     // Private State
 
@@ -28,6 +29,7 @@ public class IslandClicker : MonoBehaviour {
         inputManager = ClassManager.instance.inputManager;
         selectionManager = ClassManager.instance.selectionManager;
         prefabManager = ClassManager.instance.prefabManager;
+        dataHolder = ClassManager.instance.dataHolder;
     }
     
     // Clicker
@@ -40,7 +42,7 @@ public class IslandClicker : MonoBehaviour {
     }
 
     private void OnMouseUp() {
-        if (Time.time > mouseDownTime + .1f && inputManager.inputMode == InputMode.PeopleControl) {
+        if (Time.time > mouseDownTime + dataHolder.mouseDragCooldown && inputManager.inputMode == InputMode.PeopleControl) {
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
             unClickPos = position;
@@ -61,7 +63,7 @@ public class IslandClicker : MonoBehaviour {
 
     private void OnMouseDrag() {
         if (inputManager.inputMode == InputMode.PeopleControl) {
-            if (Time.time > mouseDownTime + .1f) {
+            if (Time.time > mouseDownTime + dataHolder.mouseDragCooldown) {
                 if (!spawnedSelector) {
                     selector = Instantiate(prefabManager.selectorBox, initialClickPos, Quaternion.identity);
                     selectorSprite = selector.GetComponent<SpriteRenderer>();

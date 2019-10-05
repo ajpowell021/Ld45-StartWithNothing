@@ -2003,6 +2003,7 @@ MonoBehaviour:
   buildingResourceGatheringSpeed: 3
   buildingResourceCapacity: 10
   workerGatherTime: 2
+  mouseDragCooldown: 0.2
 --- !u!114 &1778255548
 MonoBehaviour:
   m_ObjectHideFlags: 0
