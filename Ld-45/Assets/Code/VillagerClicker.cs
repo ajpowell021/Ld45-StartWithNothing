@@ -10,6 +10,7 @@ public class VillagerClicker : MonoBehaviour {
     private VillagerStats villagerStats;
     private VillagerGather gather;
     private InputManager inputManager;
+    private SelectionManager selectionManager;
     
     // Init
 
@@ -20,6 +21,7 @@ public class VillagerClicker : MonoBehaviour {
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
+        selectionManager = ClassManager.instance.selectionManager;
     }
 
     // On Mouse Down
@@ -27,6 +29,10 @@ public class VillagerClicker : MonoBehaviour {
     private void OnMouseDown() {
         if (!gather.gathering && inputManager.inputMode == InputMode.PeopleControl) {
             villagerStats.toggleSelected();    
+        }
+        else if (inputManager.inputMode == InputMode.BuidlingSelected) {
+            selectionManager.unselectAllBuildings();
+            villagerStats.toggleSelected();
         }
     }
 }

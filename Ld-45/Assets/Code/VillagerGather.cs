@@ -35,7 +35,16 @@ public class VillagerGather : MonoBehaviour {
     private void Update() {
         if (gathering) {
             if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
-                doneGathering();
+                // Finish a round of gathering
+                resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType), 1);
+                buildingController.updateResourceCountUi();
+                if (buildingController.currentResourcesHeld == 0) {
+                    doneGathering();    
+                }
+                else {
+                    timeGatheringStarted = Time.time;
+                    buildingController.currentResourcesHeld--;
+                }
             }
         }
     }
@@ -61,8 +70,6 @@ public class VillagerGather : MonoBehaviour {
     private void doneGathering() {
         animator.SetBool("working", false);
         gathering = false;
-        resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType), 1);
-        buildingController.updateResourceCountUi();
     }
 
     private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType) {

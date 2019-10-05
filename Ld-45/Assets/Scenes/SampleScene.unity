@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   villagerSpeed: 6
-  buildingResourceGatheringSpeed: 3
+  buildingResourceGatheringSpeed: 6
   buildingResourceCapacity: 10
   workerGatherTime: 2
   mouseDragCooldown: 0.2
