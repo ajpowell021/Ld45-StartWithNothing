@@ -8,7 +8,7 @@ public class BuildingButton : MonoBehaviour {
     // Public State
 
     public BuildingType buttonType;
-
+    
     // Classes
 
     private HudController hudController;
@@ -23,5 +23,13 @@ public class BuildingButton : MonoBehaviour {
     
     private void OnMouseDown() {
         hudController.build(buttonType);
+    }
+
+    private void OnMouseOver() {
+        gameObject.transform.localScale = new Vector3(35, 35, 35);
+    }
+
+    private void OnMouseExit() {
+        gameObject.transform.localScale = new Vector3(30, 30, 30);
     }
 }
