@@ -554,4 +554,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81de244567da8e944b8fb7fde11340d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  villagerSpeed: 1
+  villagerSpeed: 10
