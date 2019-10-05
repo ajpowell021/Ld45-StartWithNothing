@@ -34,6 +34,10 @@ public class SelectionManager : MonoBehaviour {
         return selected;
     }
 
+    public int getSelectedVillagerCount() {
+        return getSelectedVillagerObjects().Count;
+    }
+
     public List<VillagerMover> getSelectedVillagerMovers() {
         List<VillagerMover> movers = new List<VillagerMover>();
         List<GameObject> objects = getSelectedVillagerObjects();

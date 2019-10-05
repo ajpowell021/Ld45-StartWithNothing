@@ -9,18 +9,21 @@ public class VillagerMover : MonoBehaviour {
 
     private DataHolder dataHolder;
     private VillagerStats stats;
+    private VillagerGather gatherScript;
     
     // Private State
 
     private Vector3 destination;
     private bool isMoving;
     private Animator animator;
+    private bool onWayToGather;
     
     // Init 
 
     private void Awake() {
         animator = gameObject.GetComponent<Animator>();
         stats = gameObject.GetComponent<VillagerStats>();
+        gatherScript = gameObject.GetComponent<VillagerGather>();
     }
 
     private void Start() {
@@ -42,8 +45,9 @@ public class VillagerMover : MonoBehaviour {
 
     // Public Functions
 
-    public void move(Vector3 newDestination) {
+    public void move(Vector3 newDestination, bool gathering = false) {
         destination = newDestination;
+        onWayToGather = gathering;
         isMoving = true;
         if (destination.y > transform.position.y) {
             animator.SetInteger("runningState", 2);
@@ -59,6 +63,10 @@ public class VillagerMover : MonoBehaviour {
         if (Vector3.Distance(transform.position, destination) < .5f + stats.id * .5f) {
             isMoving = false;
             animator.SetInteger("runningState", 0);
+            if (onWayToGather) {
+                gatherScript.arrivedAtBuilding();
+                onWayToGather = false;
+            }
         }
     }
 }

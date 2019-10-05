@@ -8,16 +8,20 @@ public class VillagerClicker : MonoBehaviour {
     // Classes
 
     private VillagerStats villagerStats;
+    private VillagerGather gather;
     
     // Init
 
     private void Awake() {
         villagerStats = gameObject.GetComponent<VillagerStats>();
+        gather = gameObject.GetComponent<VillagerGather>();
     }
 
     // On Mouse Down
     
     private void OnMouseDown() {
-        villagerStats.toggleSelected();
+        if (!gather.gathering) {
+            villagerStats.toggleSelected();    
+        }
     }
 }

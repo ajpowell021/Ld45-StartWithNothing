@@ -52,6 +52,17 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void buildingClicked(BuildingController building) {
+        int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+        if (selectedVillagerCount > 0) {
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(building.gameObject.transform.position, true);
+                movers[i].GetComponent<VillagerGather>().setBuildingController(building);
+            }
+        }
+    }
+
     public void setInputMode(InputMode mode) {
         inputMode = mode;
     }

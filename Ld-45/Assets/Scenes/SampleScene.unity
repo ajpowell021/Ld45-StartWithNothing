@@ -1960,6 +1960,7 @@ MonoBehaviour:
   prefabManager: {fileID: 0}
   hudController: {fileID: 0}
   cursorManager: {fileID: 0}
+  resourceManager: {fileID: 0}
 --- !u!4 &1778255545
 Transform:
   m_ObjectHideFlags: 0
@@ -2001,6 +2002,7 @@ MonoBehaviour:
   villagerSpeed: 6
   buildingResourceGatheringSpeed: 3
   buildingResourceCapacity: 10
+  workerGatherTime: 2
 --- !u!114 &1778255548
 MonoBehaviour:
   m_ObjectHideFlags: 0

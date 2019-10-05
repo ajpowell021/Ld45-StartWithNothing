@@ -9,4 +9,5 @@ public class DataHolder : MonoBehaviour {
     public float villagerSpeed;
     public float buildingResourceGatheringSpeed;
     public int buildingResourceCapacity;
+    public int workerGatherTime;
 }

@@ -17,11 +17,13 @@ public class BuildingController : MonoBehaviour {
     // Classes
 
     private DataHolder dataHolder;
+    private InputManager inputManager;
     
     // Init
 
     private void Start() {
         dataHolder = ClassManager.instance.dataHolder;
+        inputManager = ClassManager.instance.inputManager;
         timeOfLastHarvest = Time.time;
     }
     
@@ -34,5 +36,11 @@ public class BuildingController : MonoBehaviour {
                 timeOfLastHarvest = Time.time;
             }
         }
+    }
+    
+    // On Click
+
+    private void OnMouseDown() {
+        inputManager.buildingClicked(this);
     }
 }
