@@ -9,6 +9,7 @@ public class VillagerClicker : MonoBehaviour {
 
     private VillagerStats villagerStats;
     private VillagerGather gather;
+    private InputManager inputManager;
     
     // Init
 
@@ -17,10 +18,14 @@ public class VillagerClicker : MonoBehaviour {
         gather = gameObject.GetComponent<VillagerGather>();
     }
 
+    private void Start() {
+        inputManager = ClassManager.instance.inputManager;
+    }
+
     // On Mouse Down
     
     private void OnMouseDown() {
-        if (!gather.gathering) {
+        if (!gather.gathering && inputManager.inputMode == InputMode.PeopleControl) {
             villagerStats.toggleSelected();    
         }
     }

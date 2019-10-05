@@ -32,6 +32,7 @@ public class InputManager : MonoBehaviour {
     private void Update() {
         if (Input.GetMouseButton(1)) {
             selectionManager.unselectAllVillagers();
+            selectionManager.unselectAllBuildings();
         } 
     }
 
@@ -60,6 +61,10 @@ public class InputManager : MonoBehaviour {
                 movers[i].move(building.gameObject.transform.position, true);
                 movers[i].GetComponent<VillagerGather>().setBuildingController(building);
             }
+        }
+        else {
+            building.toggleBuildingSelect();
+            inputMode = !building.selected ? InputMode.PeopleControl : InputMode.BuidlingSelected;
         }
     }
 

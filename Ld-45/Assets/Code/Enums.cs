@@ -11,7 +11,8 @@ public enum BuildingType {
 
 public enum InputMode {
     PeopleControl,
-    Build
+    Build,
+    BuidlingSelected
 }
 
 public enum ResourceType {
@@ -21,3 +22,6 @@ public enum ResourceType {
     Cotton
 }
 
+public enum RadialButtonType {
+    
+}

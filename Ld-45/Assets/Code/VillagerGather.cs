@@ -62,6 +62,7 @@ public class VillagerGather : MonoBehaviour {
         animator.SetBool("working", false);
         gathering = false;
         resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType), 1);
+        buildingController.updateResourceCountUi();
     }
 
     private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType) {

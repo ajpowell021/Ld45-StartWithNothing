@@ -56,6 +56,13 @@ public class SelectionManager : MonoBehaviour {
         }
     }
 
+    public void unselectAllBuildings() {
+        List<GameObject> buildings = GameObject.FindGameObjectsWithTag("Building").ToList();
+        for (int i = 0; i < buildings.Count; i++) {
+            buildings[i].GetComponent<BuildingController>().unselect();
+        }
+    }
+
     public List<VillagerStats> getAllVillagerStatsInBounds(Vector3 firstCorner, Vector3 secondCorner) {
         List<GameObject> villagers = getAllVillagerObjects();
         List<VillagerStats> stats = new List<VillagerStats>();
