@@ -13,8 +13,13 @@ public class VillagerMover : MonoBehaviour {
 
     private Vector3 destination;
     private bool isMoving;
-
+    private Animator animator;
+    
     // Init 
+
+    private void Awake() {
+        animator = gameObject.GetComponent<Animator>();
+    }
 
     private void Start() {
         dataHolder = ClassManager.instance.dataHolder;
@@ -38,6 +43,12 @@ public class VillagerMover : MonoBehaviour {
     public void move(Vector3 newDestination) {
         destination = newDestination;
         isMoving = true;
+        if (destination.y > transform.position.y) {
+            animator.SetInteger("runningState", 2);
+        }
+        else {
+            animator.SetInteger("runningState", 1);
+        }
     }
     
     // Private Functions
@@ -45,6 +56,7 @@ public class VillagerMover : MonoBehaviour {
     private void checkIfArrived() {
         if (Vector3.Distance(transform.position, destination) < .5f) {
             isMoving = false;
+            animator.SetInteger("runningState", 0);
         }
     }
 }

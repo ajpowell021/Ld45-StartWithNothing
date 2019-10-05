@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 271322741}
   - component: {fileID: 271322745}
   - component: {fileID: 271322746}
+  - component: {fileID: 271322747}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Villager
@@ -258,6 +259,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &271322747
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271322740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd8f1d826b5cdb84c9ef279803c5f418, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &303577360
 GameObject:
   m_ObjectHideFlags: 0
