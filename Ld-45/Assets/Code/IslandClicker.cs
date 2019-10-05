@@ -40,7 +40,7 @@ public class IslandClicker : MonoBehaviour {
     }
 
     private void OnMouseUp() {
-        if (Time.time > mouseDownTime + .1f) {
+        if (Time.time > mouseDownTime + .1f && inputManager.inputMode == InputMode.PeopleControl) {
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
             unClickPos = position;
@@ -60,21 +60,23 @@ public class IslandClicker : MonoBehaviour {
     }
 
     private void OnMouseDrag() {
-        if (Time.time > mouseDownTime + .1f) {
-            if (!spawnedSelector) {
-                selector = Instantiate(prefabManager.selectorBox, initialClickPos, Quaternion.identity);
-                selectorSprite = selector.GetComponent<SpriteRenderer>();
-                spawnedSelector = true;
-            }
-            else {
-                Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                position.z = 0;
-                unClickPos = position;
-                float x = initialClickPos.x - unClickPos.x;
-                float y = initialClickPos.y - unClickPos.y;
-                selectorSprite.size = new Vector2(x, y);
-                selector.transform.position = new Vector3((initialClickPos.x + unClickPos.x) / 2, (initialClickPos.y + unClickPos.y) / 2, 0);
-            }
+        if (inputManager.inputMode == InputMode.PeopleControl) {
+            if (Time.time > mouseDownTime + .1f) {
+                if (!spawnedSelector) {
+                    selector = Instantiate(prefabManager.selectorBox, initialClickPos, Quaternion.identity);
+                    selectorSprite = selector.GetComponent<SpriteRenderer>();
+                    spawnedSelector = true;
+                }
+                else {
+                    Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    position.z = 0;
+                    unClickPos = position;
+                    float x = initialClickPos.x - unClickPos.x;
+                    float y = initialClickPos.y - unClickPos.y;
+                    selectorSprite.size = new Vector2(x, y);
+                    selector.transform.position = new Vector3((initialClickPos.x + unClickPos.x) / 2, (initialClickPos.y + unClickPos.y) / 2, 0);
+                }
+            }    
         }
     }
 }

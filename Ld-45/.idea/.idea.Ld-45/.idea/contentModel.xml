@@ -8,8 +8,13 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="AnimationDestroyer.cs" t="Include" />
+          <e p="BuildingButton.cs" t="Include" />
           <e p="ClassManager.cs" t="Include" />
+          <e p="CursorManager.cs" t="Include" />
+          <e p="CursorObjectHitDetector.cs" t="Include" />
           <e p="DataHolder.cs" t="Include" />
+          <e p="Enums.cs" t="Include" />
+          <e p="HudController.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="IslandClicker.cs" t="Include" />
           <e p="PrefabManager.cs" t="Include" />

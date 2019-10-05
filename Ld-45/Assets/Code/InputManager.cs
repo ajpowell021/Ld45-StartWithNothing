@@ -5,16 +5,26 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
     
+    // Public State
+
+    public InputMode inputMode;
+
     // Classes
 
     private SelectionManager selectionManager;
     private PrefabManager prefabManager;
-    
+    public CursorManager cursorManager;
+
     // Init
+
+    private void Awake() {
+        setInputMode(InputMode.PeopleControl);
+    }
 
     private void Start() {
         selectionManager = ClassManager.instance.selectionManager;
         prefabManager = ClassManager.instance.prefabManager;
+        cursorManager = ClassManager.instance.cursorManager;
     }
     
     // Update
@@ -29,11 +39,20 @@ public class InputManager : MonoBehaviour {
 
     // Move any selected villagers to this position.
     public void islandClicked(Vector3 position) {
-        List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
-        for (int i = 0; i < movers.Count; i++) {
-             movers[i].move(position);
-        }
+        if (inputMode == InputMode.PeopleControl) {
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(position);
+            }
 
-        Instantiate(prefabManager.groundClick, position, Quaternion.identity);
+            Instantiate(prefabManager.groundClick, position, Quaternion.identity);    
+        }
+        else if (inputMode == InputMode.Build) {
+            cursorManager.buildTheBuildingOnCursor();
+        }
+    }
+
+    public void setInputMode(InputMode mode) {
+        inputMode = mode;
     }
 }

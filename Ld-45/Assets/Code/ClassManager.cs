@@ -17,6 +17,8 @@ public class ClassManager : MonoBehaviour {
     public DataHolder dataHolder;
     public SelectionManager selectionManager;
     public PrefabManager prefabManager;
+    public HudController hudController;
+    public CursorManager cursorManager;
     
     // Init
 
@@ -46,5 +48,7 @@ public class ClassManager : MonoBehaviour {
         dataHolder = gameObject.GetComponent<DataHolder>();
         selectionManager = gameObject.GetComponent<SelectionManager>();
         prefabManager = gameObject.GetComponent<PrefabManager>();
+        hudController = gameObject.GetComponent<HudController>();
+        cursorManager = gameObject.GetComponent<CursorManager>();
     }
 }
