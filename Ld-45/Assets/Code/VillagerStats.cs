@@ -7,8 +7,9 @@ public class VillagerStats : MonoBehaviour {
 
     // Public State
 
-    public string name;
+    public string villagerName;
     public bool selected;
+    public int id;
     
     // Private State
 

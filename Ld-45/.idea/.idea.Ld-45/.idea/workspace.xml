@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Code/VillagerMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/VillagerMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ld-45/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ld-45/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game-Art/Character_Selected.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game-Art/Character_Selected.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game-Art/Character_Selected.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game-Art/Character_Selected.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game-Art/marque_select_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game-Art/marque_select_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/marque_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/marque_select.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/marquee_select.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Raw-Art/marquee_select.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +108,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/VillagerMover.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="1188">
               <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
               <folding>
                 <marker date="1570249134167" expanded="true" signature="6:92" ph="..." />
@@ -137,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Code/VillagerStats.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="812">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <marker date="1570247511981" expanded="true" signature="6:92" ph="..." />
                 <marker date="1570247511981" expanded="true" signature="137:733" ph="{...}" />
@@ -277,7 +284,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8832000" />
+    <option name="totallyTimeSpent" value="9431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,7 +446,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Code/VillagerStats.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
           <folding>
             <marker date="1570247511981" expanded="true" signature="6:92" ph="..." />
             <marker date="1570247511981" expanded="true" signature="137:733" ph="{...}" />
@@ -454,7 +461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/VillagerMover.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="1188">
           <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
           <folding>
             <marker date="1570249134167" expanded="true" signature="6:92" ph="..." />

@@ -8,6 +8,7 @@ public class VillagerMover : MonoBehaviour {
     // Classes
 
     private DataHolder dataHolder;
+    private VillagerStats stats;
     
     // Private State
 
@@ -19,6 +20,7 @@ public class VillagerMover : MonoBehaviour {
 
     private void Awake() {
         animator = gameObject.GetComponent<Animator>();
+        stats = gameObject.GetComponent<VillagerStats>();
     }
 
     private void Start() {
@@ -54,7 +56,7 @@ public class VillagerMover : MonoBehaviour {
     // Private Functions
 
     private void checkIfArrived() {
-        if (Vector3.Distance(transform.position, destination) < .5f) {
+        if (Vector3.Distance(transform.position, destination) < .5f + stats.id * .5f) {
             isMoving = false;
             animator.SetInteger("runningState", 0);
         }
