@@ -20,6 +20,7 @@ public class ClassManager : MonoBehaviour {
     public HudController hudController;
     public CursorManager cursorManager;
     public ResourceManager resourceManager;
+    public RandomResourceSpawner randomResourceSpawner;
     
     // Init
 
@@ -52,5 +53,6 @@ public class ClassManager : MonoBehaviour {
         hudController = gameObject.GetComponent<HudController>();
         cursorManager = gameObject.GetComponent<CursorManager>();
         resourceManager = gameObject.GetComponent<ResourceManager>();
+        randomResourceSpawner = gameObject.GetComponent<RandomResourceSpawner>();
     }
 }
