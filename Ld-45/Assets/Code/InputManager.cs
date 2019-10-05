@@ -16,6 +16,14 @@ public class InputManager : MonoBehaviour {
         selectionManager = ClassManager.instance.selectionManager;
         prefabManager = ClassManager.instance.prefabManager;
     }
+    
+    // Update
+
+    private void Update() {
+        if (Input.GetMouseButton(1)) {
+            selectionManager.unselectAllVillagers();
+        } 
+    }
 
     // Public Functions
 
