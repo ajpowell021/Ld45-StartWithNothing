@@ -2658,6 +2658,10 @@ MonoBehaviour:
   stone: 0
   cotton: 0
   food: 0
+  mineCost: 8
+  lumberYardCost: 8
+  farmCost: 0
+  houseCost: 0
 --- !u!114 &1778255552
 MonoBehaviour:
   m_ObjectHideFlags: 0

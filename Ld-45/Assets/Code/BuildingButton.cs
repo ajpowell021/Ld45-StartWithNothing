@@ -12,17 +12,31 @@ public class BuildingButton : MonoBehaviour {
     // Classes
 
     private HudController hudController;
+    private ResourceManager resourceManager;
 
     // Init
 
     private void Start() {
         hudController = ClassManager.instance.hudController;
+        resourceManager = ClassManager.instance.resourceManager;
     }
 
     // Private Functions
     
     private void OnMouseDown() {
-        hudController.build(buttonType);
+        if (buttonType == BuildingType.Mine) {
+            if (resourceManager.canAffordMine()) {
+                hudController.build(buttonType);
+            }
+        }
+        else if (buttonType == BuildingType.LumberYard) {
+            if (resourceManager.canAffordLumberYard()) {
+                hudController.build(buttonType);
+            }
+        }
+        else {
+            hudController.build(buttonType);
+        }
     }
 
     private void OnMouseOver() {

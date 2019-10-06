@@ -11,6 +11,11 @@ public class ResourceManager : MonoBehaviour {
     public int stone;
     public int cotton;
     public int food;
+
+    public int mineCost;
+    public int lumberYardCost;
+    public int farmCost;
+    public int houseCost;
     
     // Classes
 
@@ -51,4 +56,11 @@ public class ResourceManager : MonoBehaviour {
         hudController.updateResourceUi();
     }
 
+    public bool canAffordMine() {
+        return wood > mineCost;
+    }
+
+    public bool canAffordLumberYard() {
+        return stone > lumberYardCost;
+    }
 }
