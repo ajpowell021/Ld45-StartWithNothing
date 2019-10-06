@@ -60,7 +60,7 @@ public class VillagerMover : MonoBehaviour {
     // Private Functions
 
     private void checkIfArrived() {
-        if (Vector3.Distance(transform.position, destination) < .5f + stats.id * .5f) {
+        if (Vector3.Distance(transform.position, destination) < .5f + stats.id * .2f) {
             isMoving = false;
             animator.SetInteger("runningState", 0);
             if (onWayToGather) {

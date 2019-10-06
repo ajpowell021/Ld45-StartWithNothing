@@ -3993,7 +3993,7 @@ MonoBehaviour:
   mouseDragCooldown: 0.2
   treeWoodStart: 6
   boatSpeed: 3
-  timeBetweenBoats: 10
+  timeBetweenBoats: 60
 --- !u!114 &1778255548
 MonoBehaviour:
   m_ObjectHideFlags: 0
