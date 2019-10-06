@@ -20,6 +20,7 @@ public class BuildingController : MonoBehaviour {
     private GameObject radialOne;
     private GameObject radialTwo;
     private GameObject radialThree;
+    private GameObject radialAnim;
 
     public bool beingWorkedOn;
 
@@ -37,6 +38,7 @@ public class BuildingController : MonoBehaviour {
         radialOne = gameObject.transform.GetChild(2).gameObject;
         radialTwo = gameObject.transform.GetChild(3).gameObject;
         radialThree = gameObject.transform.GetChild(4).gameObject;
+        radialAnim = gameObject.transform.GetChild(5).gameObject;
     }
 
     private void Start() {
@@ -67,6 +69,7 @@ public class BuildingController : MonoBehaviour {
         radialOne.SetActive(selected);
         radialTwo.SetActive(selected);
         radialThree.SetActive(selected);
+        radialAnim.SetActive(selected);
         updateResourceCountUi();
     }
 
@@ -77,6 +80,7 @@ public class BuildingController : MonoBehaviour {
         radialOne.SetActive(selected);
         radialTwo.SetActive(selected);
         radialThree.SetActive(selected);
+        radialAnim.SetActive(selected);
         updateResourceCountUi();
     }
     
