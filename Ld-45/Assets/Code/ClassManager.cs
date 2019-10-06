@@ -21,6 +21,7 @@ public class ClassManager : MonoBehaviour {
     public CursorManager cursorManager;
     public ResourceManager resourceManager;
     public RandomResourceSpawner randomResourceSpawner;
+    public PopupController popupController;
     
     // Init
 
@@ -54,5 +55,6 @@ public class ClassManager : MonoBehaviour {
         cursorManager = gameObject.GetComponent<CursorManager>();
         resourceManager = gameObject.GetComponent<ResourceManager>();
         randomResourceSpawner = gameObject.GetComponent<RandomResourceSpawner>();
+        popupController = gameObject.GetComponent<PopupController>();
     }
 }

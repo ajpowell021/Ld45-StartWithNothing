@@ -13,12 +13,14 @@ public class BuildingButton : MonoBehaviour {
 
     private HudController hudController;
     private ResourceManager resourceManager;
+    private PopupController popupController;
 
     // Init
 
     private void Start() {
         hudController = ClassManager.instance.hudController;
         resourceManager = ClassManager.instance.resourceManager;
+        popupController = ClassManager.instance.popupController;
     }
 
     // Private Functions
@@ -41,9 +43,26 @@ public class BuildingButton : MonoBehaviour {
 
     private void OnMouseOver() {
         gameObject.transform.localScale = new Vector3(35, 35, 35);
+        popupController.showPopup(getMessage());
     }
 
     private void OnMouseExit() {
         gameObject.transform.localScale = new Vector3(30, 30, 30);
+        popupController.hidePopup();
+    }
+
+    private string getMessage() {
+        switch (buttonType) {
+            case BuildingType.LumberYard:
+                return "Build a lumber yard for 8 stones.";
+            case BuildingType.Farm:
+                return "Build a farm for free.";
+            case BuildingType.Mine:
+                return "Build a mine for 8 wood.";
+            case BuildingType.House:
+                return "Build a house for free";
+        }
+
+        return "Error!";
     }
 }
