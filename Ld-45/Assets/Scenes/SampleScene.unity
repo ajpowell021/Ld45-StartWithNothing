@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &14838448
 Transform:
   m_ObjectHideFlags: 0
@@ -2621,7 +2621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275571393
 Transform:
   m_ObjectHideFlags: 0
@@ -3994,6 +3994,7 @@ MonoBehaviour:
   treeWoodStart: 6
   boatSpeed: 3
   timeBetweenBoats: 60
+  timeBetweenHunger: 10
 --- !u!114 &1778255548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4470,7 +4471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1901941825
 Transform:
   m_ObjectHideFlags: 0
@@ -4552,7 +4553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1960913798
 Transform:
   m_ObjectHideFlags: 0
@@ -4634,7 +4635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1976238865
 Transform:
   m_ObjectHideFlags: 0

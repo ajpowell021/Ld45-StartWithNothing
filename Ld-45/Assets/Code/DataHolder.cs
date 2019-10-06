@@ -16,4 +16,5 @@ public class DataHolder : MonoBehaviour {
     public float boatSpeed;
 
     public float timeBetweenBoats;
+    public float timeBetweenHunger;
 }

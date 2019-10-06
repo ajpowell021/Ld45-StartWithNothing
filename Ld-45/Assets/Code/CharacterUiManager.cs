@@ -34,4 +34,8 @@ public class CharacterUiManager : MonoBehaviour {
     public void newCharacterArrived(int id) {
         uiObjects[id - 1].SetActive(true);
     }
+
+    public void setHungerIcon(int id, bool value) {
+        uiObjects[id - 1].transform.GetChild(1).gameObject.SetActive(value);
+    }
 }
