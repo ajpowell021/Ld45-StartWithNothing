@@ -7,9 +7,9 @@ using UnityEngine;
 public class CharacterUiManager : MonoBehaviour {
 
     private List<CharacterClickerUi> uiScripts = new List<CharacterClickerUi>();
+    public List<GameObject> uiObjects = new List<GameObject>();
 
     private void Awake() {
-        List<GameObject> uiObjects = GameObject.FindGameObjectsWithTag("CharacterUi").ToList();
         for (int i = 0; i < uiObjects.Count; i++) {
             CharacterClickerUi script = uiObjects[i].GetComponent<CharacterClickerUi>();
             uiScripts.Add(script);
@@ -29,5 +29,9 @@ public class CharacterUiManager : MonoBehaviour {
         for (int i = 0; i < uiScripts.Count; i++) {
             uiScripts[i].setSelected(false);
         }
+    }
+
+    public void newCharacterArrived(int id) {
+        uiObjects[id - 1].SetActive(true);
     }
 }

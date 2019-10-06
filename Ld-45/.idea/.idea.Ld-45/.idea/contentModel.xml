@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="AnimationDestroyer.cs" t="Include" />
+          <e p="BoatSpawnerManager.cs" t="Include" />
           <e p="BuildingButton.cs" t="Include" />
           <e p="BuildingController.cs" t="Include" />
           <e p="BuildingSiteController.cs" t="Include" />
@@ -25,6 +26,7 @@
           <e p="PrefabManager.cs" t="Include" />
           <e p="ProgressBar.cs" t="Include" />
           <e p="RadialButtonController.cs" t="Include" />
+          <e p="RaftController.cs" t="Include" />
           <e p="RandomResourceSpawner.cs" t="Include" />
           <e p="ResourceManager.cs" t="Include" />
           <e p="RockController.cs" t="Include" />

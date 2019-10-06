@@ -47,6 +47,9 @@ public class CharacterClickerUi : MonoBehaviour {
         yield return new WaitForSeconds(.1f);
         inPosition = transform.position;
         outPosition = new Vector3(-11.7f, inPosition.y, 0);
+        if (id != 1) {
+            gameObject.SetActive(false);
+        }
     }
 
     private void Update() {

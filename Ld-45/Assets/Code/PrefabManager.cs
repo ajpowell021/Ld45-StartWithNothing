@@ -8,6 +8,9 @@ public class PrefabManager : MonoBehaviour {
     
     // Public State
 
+    public GameObject villager;
+    public GameObject boat;
+
     public GameObject groundClick;
     public GameObject selectorBox;
 
