@@ -120,6 +120,7 @@ public class VillagerGather : MonoBehaviour {
 
     public void setBuildingController(BuildingController controller) {
         buildingController = controller;
+        controller.beingWorkedOn = true;
     }
 
     public void setBuildingSiteController(BuildingSiteController controller) {
@@ -192,6 +193,9 @@ public class VillagerGather : MonoBehaviour {
 
     private void doneGathering() {
         animator.SetBool("working", false);
+        if (gathering) {
+            buildingController.beingWorkedOn = false;
+        }
         gathering = false;
         choppingTree = false;
         hittingRock = false;

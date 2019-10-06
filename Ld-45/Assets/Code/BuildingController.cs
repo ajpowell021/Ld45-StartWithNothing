@@ -21,10 +21,13 @@ public class BuildingController : MonoBehaviour {
     private GameObject radialTwo;
     private GameObject radialThree;
 
+    public bool beingWorkedOn;
+
     // Classes
 
     private DataHolder dataHolder;
     private InputManager inputManager;
+    private SelectionManager selectionManager;
     
     // Init
 
@@ -39,6 +42,7 @@ public class BuildingController : MonoBehaviour {
     private void Start() {
         dataHolder = ClassManager.instance.dataHolder;
         inputManager = ClassManager.instance.inputManager;
+        selectionManager = ClassManager.instance.selectionManager;
         timeOfLastHarvest = Time.time;
     }
     
@@ -83,6 +87,13 @@ public class BuildingController : MonoBehaviour {
     // On Click
 
     private void OnMouseDown() {
-        inputManager.buildingClicked(this);
+        if (selected) {
+            toggleBuildingSelect();
+        }
+        else {
+            selectionManager.unselectAllBuildings();
+            toggleBuildingSelect();
+        }
+        inputManager.setInputMode(!selected ? InputMode.PeopleControl : InputMode.BuidlingSelected);
     }
 }

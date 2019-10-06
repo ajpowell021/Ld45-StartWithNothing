@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour {
     private PrefabManager prefabManager;
     public CursorManager cursorManager;
     public CharacterUiManager characterUiManager;
+    public ResourceManager resourceManager;
 
     // Init
 
@@ -27,6 +28,7 @@ public class InputManager : MonoBehaviour {
         prefabManager = ClassManager.instance.prefabManager;
         cursorManager = ClassManager.instance.cursorManager;
         characterUiManager = ClassManager.instance.characterUiManager;
+        resourceManager = ClassManager.instance.resourceManager;
     }
     
     // Update
@@ -39,6 +41,12 @@ public class InputManager : MonoBehaviour {
             inputMode = InputMode.PeopleControl;
             characterUiManager.unselectAll();
         } 
+        else if (Input.GetKeyDown(KeyCode.P)) {
+            resourceManager.adjustResource(ResourceType.Food, 10);
+            resourceManager.adjustResource(ResourceType.Wood, 10);
+            resourceManager.adjustResource(ResourceType.Stone, 10);
+            resourceManager.adjustResource(ResourceType.Cotton, 10);
+        }
     }
 
     // Public Functions
@@ -68,16 +76,6 @@ public class InputManager : MonoBehaviour {
             }
             selectionManager.unselectAllVillagers();
             characterUiManager.unselectAll();
-        }
-        else {
-            if (building.selected) {
-                building.toggleBuildingSelect();
-            }
-            else {
-                selectionManager.unselectAllBuildings();
-                building.toggleBuildingSelect();
-            }
-            inputMode = !building.selected ? InputMode.PeopleControl : InputMode.BuidlingSelected;
         }
     }
 
