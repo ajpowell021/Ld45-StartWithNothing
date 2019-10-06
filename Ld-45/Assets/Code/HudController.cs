@@ -34,9 +34,9 @@ public class HudController : MonoBehaviour {
     }
 
     public void updateResourceUi() {
-        woodText.text = "Wood: " + resourceManager.wood;
-        stoneText.text = "Stone: " + resourceManager.stone;
-        cottonText.text = "Cotton: " + resourceManager.cotton;
-        foodText.text = "Food: " + resourceManager.food;
+        woodText.text = "x" + resourceManager.wood;
+        stoneText.text = "x" + resourceManager.stone;
+        cottonText.text = "x" + resourceManager.cotton;
+        foodText.text = "x" + resourceManager.food;
     }
 }
