@@ -277,7 +277,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gathering: 0
   building: 0
+  choppingTree: 0
+  hittingRock: 0
   enrouteToBuilding: 0
+  enrouteToTree: 0
+  enrouteToBoulder: 0
 --- !u!1001 &5648859587390091500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,6 +353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813821530637623664, guid: 7f1bb968f44eafc48b4e299d1ff8e0a3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1bb968f44eafc48b4e299d1ff8e0a3, type: 3}
