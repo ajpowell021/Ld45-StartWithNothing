@@ -23,6 +23,11 @@ public class PrefabManager : MonoBehaviour {
     public GameObject treeTwo;
     public GameObject treeThree;
 
+    public GameObject rockOne;
+    public GameObject rockTwo;
+    public GameObject rockThree;
+    public GameObject rockFour;
+
     // Public Functions
 
     public GameObject getPrefabFromBuildingType(BuildingType type) {
@@ -57,6 +62,23 @@ public class PrefabManager : MonoBehaviour {
         
         Debug.LogError("Random Tree out of range.");
         return treeZero.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public Sprite getRandomRockSprite() {
+        int roll = Random.Range(0, 4);
+        switch (roll) {
+            case 0:
+                return rockOne.GetComponent<SpriteRenderer>().sprite;
+            case 1:
+                return rockTwo.GetComponent<SpriteRenderer>().sprite;
+            case 2:
+                return rockThree.GetComponent<SpriteRenderer>().sprite;
+            case 3:
+                return rockFour.GetComponent<SpriteRenderer>().sprite;
+        }
+        
+        Debug.LogError("Random Tree out of range.");
+        return rockOne.GetComponent<SpriteRenderer>().sprite;
     }
 
 }

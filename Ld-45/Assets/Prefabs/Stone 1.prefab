@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3811172373063005734}
   - component: {fileID: 3811172373063005737}
   - component: {fileID: 3811172373063005736}
-  - component: {fileID: 388158969054382518}
+  - component: {fileID: -2024585332054778855}
   m_Layer: 0
-  m_Name: Tree 1
-  m_TagString: Untagged
+  m_Name: Stone 1
+  m_TagString: Boulder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 3611188691014843535, guid: 4745e6df194ec0944b89e0ddb2829c6e,
+  m_Sprite: {fileID: -5265537426725716387, guid: d20715533a8fa7e4c8d7ec0bba590422,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &388158969054382518
+--- !u!114 &-2024585332054778855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3811172373063005739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf10ea6689a16d459a86beb71211532, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dbb2ba06f925594192d7c3f634d6419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resourcesLeft: 0

@@ -18,6 +18,7 @@ public class RandomResourceSpawner : MonoBehaviour {
     private void Start() {
         prefabManager = ClassManager.instance.prefabManager;
         spawnTreesAtStart();
+        spawnBouldersAtStart();
     }
 
     // top: 8
@@ -34,6 +35,15 @@ public class RandomResourceSpawner : MonoBehaviour {
             int roll = Random.Range(0, emptySpots.Count);
             GameObject tree = Instantiate(prefabManager.treeZero, emptySpots[roll], Quaternion.identity);
             tree.GetComponent<SpriteRenderer>().sprite = prefabManager.getRandomTreeSprite();
+        }
+    }
+
+    public void spawnBouldersAtStart() {
+        for (int i = 0; i < treesToSpawnAtStart; i++) {
+            List<Vector3> emptySpots = getListOfEmptySpots();
+            int roll = Random.Range(0, emptySpots.Count);
+            GameObject rock = Instantiate(prefabManager.rockOne, emptySpots[roll], Quaternion.identity);
+            rock.GetComponent<SpriteRenderer>().sprite = prefabManager.getRandomRockSprite();
         }
     }
     

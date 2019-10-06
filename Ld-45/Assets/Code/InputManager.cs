@@ -103,6 +103,19 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void boulderClicked(RockController controller) {
+        int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+        if (selectedVillagerCount > 0) {
+            // Harvest the rock
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(controller.gameObject.transform.position, true);
+                movers[i].GetComponent<VillagerGather>().setRockController(controller);
+            }
+            selectionManager.unselectAllVillagers();
+        }
+    }
+
     public void setInputMode(InputMode mode) {
         inputMode = mode;
     }

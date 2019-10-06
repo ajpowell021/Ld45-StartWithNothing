@@ -24,6 +24,7 @@
           <e p="RadialButtonController.cs" t="Include" />
           <e p="RandomResourceSpawner.cs" t="Include" />
           <e p="ResourceManager.cs" t="Include" />
+          <e p="RockController.cs" t="Include" />
           <e p="SelectionManager.cs" t="Include" />
           <e p="TreeController.cs" t="Include" />
           <e p="VillagerClicker.cs" t="Include" />

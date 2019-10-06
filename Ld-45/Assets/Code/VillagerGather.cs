@@ -10,14 +10,17 @@ public class VillagerGather : MonoBehaviour {
     private BuildingController buildingController;
     private BuildingSiteController buildingSiteController;
     private TreeController treeController;
+    private RockController rockController;
     private Animator animator;
     private float timeGatheringStarted;
     private float timeBuildingStarted;
     public bool gathering;
     public bool building;
     public bool choppingTree;
+    public bool hittingRock;
     public bool enrouteToBuilding;
     public bool enrouteToTree;
+    public bool enrouteToBoulder;
     private ProgressBar progressBar;
     private GameObject progressBarObject;
 
@@ -81,6 +84,24 @@ public class VillagerGather : MonoBehaviour {
                 }
             }
         }
+        else if (hittingRock) {
+            // Set Progress bar
+            float percent = (1 - (timeGatheringStarted + dataHolder.workerGatherTime - Time.time) / 2) * 100;
+            progressBar.setPercent(Mathf.RoundToInt(percent));
+
+            if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
+                // Finish a round of gathering from rock
+                resourceManager.adjustResource(ResourceType.Stone, 1);
+                if (rockController.resourcesLeft == 0) {
+                    doneGathering();
+                }
+                else {
+                    timeGatheringStarted = Time.time;
+                    rockController.resourcesLeft--;
+                    rockController.checkIfEmpty();
+                }
+            }
+        }
         else if (building) {
             if (Time.time > timeBuildingStarted + dataHolder.workerGatherTime) {
                 // Finish a round of building
@@ -111,6 +132,11 @@ public class VillagerGather : MonoBehaviour {
         enrouteToTree = true;
     }
 
+    public void setRockController(RockController controller) {
+        rockController = controller;
+        enrouteToBoulder = true;
+    }
+
     public void arrivedAtBuilding() {
         if (enrouteToBuilding) {
             // Work on building
@@ -133,6 +159,20 @@ public class VillagerGather : MonoBehaviour {
                 timeGatheringStarted = Time.time;
                 animator.SetBool("working", true);
                 stats.setSelected(false);
+                enrouteToTree = false;
+            }
+        }
+        else if (enrouteToBoulder) {
+            // Harvest Boulder
+            if (rockController.resourcesLeft > 0) {
+                rockController.resourcesLeft--;
+                rockController.checkIfEmpty();
+                progressBarObject.SetActive(true);
+                hittingRock = true;
+                timeGatheringStarted = Time.time;
+                animator.SetBool("working", true);
+                stats.setSelected(false);
+                enrouteToBoulder = false;
             }
         }
         else {
@@ -154,6 +194,7 @@ public class VillagerGather : MonoBehaviour {
         animator.SetBool("working", false);
         gathering = false;
         choppingTree = false;
+        hittingRock = false;
         progressBarObject.SetActive(false);
     }
 
