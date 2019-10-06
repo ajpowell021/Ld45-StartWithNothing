@@ -84,7 +84,6 @@ public class SelectionManager : MonoBehaviour {
 
     public void selectVillagerById(int id) {
         unselectAllBuildings();
-        unselectAllVillagers();
 
         List<GameObject> people = getAllVillagerObjects();
         for (int i = 0; i < people.Count; i++) {
