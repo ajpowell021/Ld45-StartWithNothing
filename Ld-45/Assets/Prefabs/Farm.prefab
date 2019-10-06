@@ -321,6 +321,7 @@ MonoBehaviour:
   selected: 0
   buildingType: 1
   currentResourcesHeld: 0
+  beingWorkedOn: 0
 --- !u!1001 &4117093210249704514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -532,7 +533,7 @@ PrefabInstance:
     - target: {fileID: 3757671406870551354, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2242738622922134801, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}

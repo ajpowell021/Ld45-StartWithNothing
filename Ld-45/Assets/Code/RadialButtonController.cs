@@ -30,11 +30,13 @@ public class RadialButtonController : MonoBehaviour {
 
     public void OnMouseDown() {
         switch (buttonType) {
+            case Button.DemolishLumber:
             case Button.DemolishMine:
                 if (!buildingController.beingWorkedOn) {
                     Destroy(gameObject.transform.parent.gameObject);    
                 }
                 break;
+            case Button.HarvestLumber:
             case Button.HarvestMine:
                 inputManager.buildingClicked(buildingController);
                 break;

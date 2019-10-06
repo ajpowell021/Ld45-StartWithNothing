@@ -116,6 +116,7 @@ MonoBehaviour:
   selected: 0
   buildingType: 0
   currentResourcesHeld: 0
+  beingWorkedOn: 0
 --- !u!1 &7759891352879081178
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +398,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: buttonType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1a9b02b5e43e15a4cb78c11e38def82f, type: 3}
@@ -482,6 +488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: buttonType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -617,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 3757671406870551354, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7691920644396525356, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
@@ -733,6 +744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: buttonType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
