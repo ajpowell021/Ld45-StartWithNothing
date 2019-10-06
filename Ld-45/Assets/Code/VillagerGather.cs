@@ -9,12 +9,15 @@ public class VillagerGather : MonoBehaviour {
 
     private BuildingController buildingController;
     private BuildingSiteController buildingSiteController;
+    private TreeController treeController;
     private Animator animator;
     private float timeGatheringStarted;
     private float timeBuildingStarted;
     public bool gathering;
     public bool building;
+    public bool choppingTree;
     public bool enrouteToBuilding;
+    public bool enrouteToTree;
     private ProgressBar progressBar;
     private GameObject progressBarObject;
 
@@ -44,8 +47,6 @@ public class VillagerGather : MonoBehaviour {
         if (gathering) {
             
             // Set progress bar
-
-           // Debug.Log("time: " + Time.time);
             float percent = (1 - (timeGatheringStarted + dataHolder.workerGatherTime - Time.time) / 2) * 100;
             progressBar.setPercent(Mathf.RoundToInt(percent));
 
@@ -59,6 +60,24 @@ public class VillagerGather : MonoBehaviour {
                 else {
                     timeGatheringStarted = Time.time;
                     buildingController.currentResourcesHeld--;
+                }
+            }
+        }
+        else if (choppingTree) {
+            // Set progress bar
+            float percent = (1 - (timeGatheringStarted + dataHolder.workerGatherTime - Time.time) / 2) * 100;
+            progressBar.setPercent(Mathf.RoundToInt(percent));
+
+            if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
+                // Finish a round of gathering from tree
+                resourceManager.adjustResource(ResourceType.Wood, 1);
+                if (treeController.resourcesLeft == 0) {
+                    doneGathering();
+                }
+                else {
+                    timeGatheringStarted = Time.time;
+                    treeController.resourcesLeft--;
+                    treeController.checkIfEmpty();
                 }
             }
         }
@@ -87,6 +106,11 @@ public class VillagerGather : MonoBehaviour {
         enrouteToBuilding = true;
     }
 
+    public void setTreeController(TreeController controller) {
+        treeController = controller;
+        enrouteToTree = true;
+    }
+
     public void arrivedAtBuilding() {
         if (enrouteToBuilding) {
             // Work on building
@@ -97,6 +121,18 @@ public class VillagerGather : MonoBehaviour {
                 animator.SetBool("working", true);
                 stats.setSelected(false);
                 enrouteToBuilding = false;
+            }
+        }
+        else if (enrouteToTree) {
+            // Harvest Tree
+            if (treeController.resourcesLeft > 0) {
+                treeController.resourcesLeft--;
+                treeController.checkIfEmpty();
+                progressBarObject.SetActive(true);
+                choppingTree = true;
+                timeGatheringStarted = Time.time;
+                animator.SetBool("working", true);
+                stats.setSelected(false);
             }
         }
         else {
@@ -117,6 +153,7 @@ public class VillagerGather : MonoBehaviour {
     private void doneGathering() {
         animator.SetBool("working", false);
         gathering = false;
+        choppingTree = false;
         progressBarObject.SetActive(false);
     }
 

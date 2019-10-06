@@ -90,6 +90,19 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void treeClicked(TreeController controller) {
+        int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+        if (selectedVillagerCount > 0) {
+            // Harvest the tree
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(controller.gameObject.transform.position, true);
+                movers[i].GetComponent<VillagerGather>().setTreeController(controller);
+            }
+            selectionManager.unselectAllVillagers();
+        }
+    }
+
     public void setInputMode(InputMode mode) {
         inputMode = mode;
     }

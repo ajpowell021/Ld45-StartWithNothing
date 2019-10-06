@@ -11,4 +11,5 @@ public class DataHolder : MonoBehaviour {
     public int buildingResourceCapacity;
     public int workerGatherTime;
     public float mouseDragCooldown;
+    public int treeWoodStart;
 }
