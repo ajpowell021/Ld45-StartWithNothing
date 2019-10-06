@@ -22,6 +22,7 @@ public class ClassManager : MonoBehaviour {
     public ResourceManager resourceManager;
     public RandomResourceSpawner randomResourceSpawner;
     public PopupController popupController;
+    public CharacterUiManager characterUiManager;
     
     // Init
 
@@ -56,5 +57,6 @@ public class ClassManager : MonoBehaviour {
         resourceManager = gameObject.GetComponent<ResourceManager>();
         randomResourceSpawner = gameObject.GetComponent<RandomResourceSpawner>();
         popupController = gameObject.GetComponent<PopupController>();
+        characterUiManager = gameObject.GetComponent<CharacterUiManager>();
     }
 }

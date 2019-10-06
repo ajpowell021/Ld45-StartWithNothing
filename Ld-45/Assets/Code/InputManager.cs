@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour {
     private SelectionManager selectionManager;
     private PrefabManager prefabManager;
     public CursorManager cursorManager;
+    public CharacterUiManager characterUiManager;
 
     // Init
 
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour {
         selectionManager = ClassManager.instance.selectionManager;
         prefabManager = ClassManager.instance.prefabManager;
         cursorManager = ClassManager.instance.cursorManager;
+        characterUiManager = ClassManager.instance.characterUiManager;
     }
     
     // Update
@@ -35,6 +37,7 @@ public class InputManager : MonoBehaviour {
             selectionManager.unselectAllBuildings();
             cursorManager.cancelBuild();
             inputMode = InputMode.PeopleControl;
+            characterUiManager.unselectAll();
         } 
     }
 
@@ -64,6 +67,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].GetComponent<VillagerGather>().setBuildingController(building);
             }
             selectionManager.unselectAllVillagers();
+            characterUiManager.unselectAll();
         }
         else {
             if (building.selected) {
@@ -87,6 +91,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].GetComponent<VillagerGather>().setBuildingSiteController(controller);
             }
             selectionManager.unselectAllVillagers();
+            characterUiManager.unselectAll();
         }
     }
 
@@ -100,6 +105,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].GetComponent<VillagerGather>().setTreeController(controller);
             }
             selectionManager.unselectAllVillagers();
+            characterUiManager.unselectAll();
         }
     }
 
@@ -113,6 +119,7 @@ public class InputManager : MonoBehaviour {
                 movers[i].GetComponent<VillagerGather>().setRockController(controller);
             }
             selectionManager.unselectAllVillagers();
+            characterUiManager.unselectAll();
         }
     }
 

@@ -11,6 +11,7 @@ public class IslandClicker : MonoBehaviour {
     private SelectionManager selectionManager;
     private PrefabManager prefabManager;
     private DataHolder dataHolder;
+    private CharacterUiManager characterUiManager;
     
     // Private State
 
@@ -30,6 +31,7 @@ public class IslandClicker : MonoBehaviour {
         selectionManager = ClassManager.instance.selectionManager;
         prefabManager = ClassManager.instance.prefabManager;
         dataHolder = ClassManager.instance.dataHolder;
+        characterUiManager = ClassManager.instance.characterUiManager;
     }
     
     // Clicker
@@ -51,6 +53,7 @@ public class IslandClicker : MonoBehaviour {
             List<VillagerStats> stats = selectionManager.getAllVillagerStatsInBounds(initialClickPos, unClickPos);
             for (int i = 0; i < stats.Count; i++) {
                 stats[i].setSelected(true);
+                characterUiManager.characterSelected(stats[i].id, true);
             }
 
             Destroy(selector);

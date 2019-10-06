@@ -9,6 +9,7 @@ TagManager:
   - Building
   - Tree
   - Boulder
+  - CharacterUi
   layers:
   - Default
   - TransparentFX

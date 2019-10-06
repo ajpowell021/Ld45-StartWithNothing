@@ -21,6 +21,25 @@ public class SelectionManager : MonoBehaviour {
 
         return stats;
     }
+
+    public List<VillagerStats> getAllSelectedVillagerStats() {
+        List<GameObject> objects = getAllVillagerObjects();
+        List<VillagerStats> stats = new List<VillagerStats>();
+        List<VillagerStats> selectedStats = new List<VillagerStats>();
+
+        
+        for (int i = 0; i < objects.Count; i++) {
+            stats.Add(objects[i].GetComponent<VillagerStats>());
+        }
+
+        for (int i = 0; i < stats.Count; i++) {
+            if (stats[i].selected) {
+                selectedStats.Add(stats[i]);
+            }
+        }
+
+        return selectedStats;
+    }
     
     public List<GameObject> getSelectedVillagerObjects() {
         List<GameObject> allVillagers = getAllVillagerObjects();
@@ -61,6 +80,43 @@ public class SelectionManager : MonoBehaviour {
         for (int i = 0; i < buildings.Count; i++) {
             buildings[i].GetComponent<BuildingController>().unselect();
         }
+    }
+
+    public void selectVillagerById(int id) {
+        unselectAllBuildings();
+        unselectAllVillagers();
+
+        List<GameObject> people = getAllVillagerObjects();
+        for (int i = 0; i < people.Count; i++) {
+            VillagerStats stats = people[i].GetComponent<VillagerStats>();
+            if (stats.id == id) {
+                stats.setSelected(true);
+                return;
+            }
+        }
+    }
+
+    public void unselectVillagerById(int id) {
+        List<VillagerStats> stats = getAllSelectedVillagerStats();
+        for (int i = 0; i < stats.Count; i++) {
+            if (stats[i].id == id) {
+                stats[i].setSelected(false);
+                return;
+            }
+        }
+    }
+
+    public GameObject getCharacterById(int id) {
+        List<GameObject> people = getAllVillagerObjects();
+        for (int i = 0; i < people.Count; i++) {
+            VillagerStats stats = people[i].GetComponent<VillagerStats>();
+            if (stats.id == id) {
+                return people[i];
+            }
+        }
+
+        Debug.LogError("NO PERSON OF THIS ID FOUND");
+        return people[0];
     }
 
     public List<VillagerStats> getAllVillagerStatsInBounds(Vector3 firstCorner, Vector3 secondCorner) {
