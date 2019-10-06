@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ld-45/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ld-45/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/titlescreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Raw-Art/titlescreen.png" afterDir="false" />
-    </list>
+    <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,15 +106,18 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Code/StartButtonController.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+                <state relative-caret-position="609">
+                  <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
                   <folding>
-                    <marker date="1570335498906" expanded="true" signature="6:92" ph="..." />
-                    <marker date="1570335498906" expanded="true" signature="145:575" ph="{...}" />
-                    <marker date="1570335498906" expanded="true" signature="194:229" ph="{...}" />
-                    <marker date="1570335498906" expanded="true" signature="360:423" ph="{...}" />
-                    <marker date="1570335498906" expanded="true" signature="456:498" ph="{...}" />
-                    <marker date="1570335498906" expanded="true" signature="531:573" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="6:127" ph="..." />
+                    <marker date="1570335630735" expanded="true" signature="180:825" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="229:264" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="418:481" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="514:556" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="589:631" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="664:823" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="698:760" ph="{...}" />
+                    <marker date="1570335630735" expanded="true" signature="760:817" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -327,12 +327,12 @@
       <option name="presentableId" value="Default" />
       <updated>1570227756124</updated>
       <workItem from="1570227761858" duration="6130000" />
-      <workItem from="1570286395391" duration="33151000" />
+      <workItem from="1570286395391" duration="33830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47616000" />
+    <option name="totallyTimeSpent" value="48295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -896,15 +896,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/StartButtonController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="609">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding>
-            <marker date="1570335498906" expanded="true" signature="6:92" ph="..." />
-            <marker date="1570335498906" expanded="true" signature="145:575" ph="{...}" />
-            <marker date="1570335498906" expanded="true" signature="194:229" ph="{...}" />
-            <marker date="1570335498906" expanded="true" signature="360:423" ph="{...}" />
-            <marker date="1570335498906" expanded="true" signature="456:498" ph="{...}" />
-            <marker date="1570335498906" expanded="true" signature="531:573" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="6:127" ph="..." />
+            <marker date="1570335630735" expanded="true" signature="180:825" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="229:264" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="418:481" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="514:556" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="589:631" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="664:823" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="698:760" ph="{...}" />
+            <marker date="1570335630735" expanded="true" signature="760:817" ph="{...}" />
           </folding>
         </state>
       </provider>
