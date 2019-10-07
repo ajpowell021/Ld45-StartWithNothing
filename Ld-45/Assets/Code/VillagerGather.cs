@@ -17,6 +17,8 @@ public class VillagerGather : MonoBehaviour {
     public bool gathering;
     public bool building;
     public bool choppingTree;
+    public bool sleeping;
+    public bool eating;
     public bool hittingRock;
     public bool enrouteToBuilding;
     public bool enrouteToTree;
@@ -29,11 +31,13 @@ public class VillagerGather : MonoBehaviour {
     private DataHolder dataHolder;
     private ResourceManager resourceManager;
     private VillagerStats stats;
+    private SpriteRenderer spriteRenderer;
 
     // Init
 
     private void Awake() {
         animator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         stats = gameObject.GetComponent<VillagerStats>();
         progressBarObject = gameObject.transform.GetChild(1).gameObject;
         progressBar = progressBarObject.GetComponent<ProgressBar>();
@@ -100,6 +104,18 @@ public class VillagerGather : MonoBehaviour {
                     rockController.resourcesLeft--;
                     rockController.checkIfEmpty();
                 }
+            }
+        }
+        else if (eating) {
+            stats.ateFood();
+            if (Time.time > timeGatheringStarted + dataHolder.eatTime) {
+                doneEatingSleeping();
+            }
+        }
+        else if (sleeping) {
+            stats.slept();
+            if (Time.time > timeGatheringStarted + dataHolder.sleepTime) {
+                doneEatingSleeping();
             }
         }
         else if (building) {
@@ -188,6 +204,30 @@ public class VillagerGather : MonoBehaviour {
             }
         }
     }
+
+    public void arrivedAtSleep() {
+        sleeping = true;
+        timeGatheringStarted = Time.time;
+        spriteRenderer.enabled = false;
+        // Play sleep anim for house.
+        stats.setSelected(false);
+    }
+
+    public void arrivedAtEat() {
+        eating = true;
+        timeGatheringStarted = Time.time;
+        spriteRenderer.enabled = false;
+        // Play sleep anim for house.
+        stats.setSelected(false);
+    }
+
+    public bool isWorkerBusy() {
+        if (!sleeping && !eating && !gathering && !building && !hittingRock && !choppingTree) {
+            return false;
+        }
+
+        return true;
+    }
     
     // Private Functions
 
@@ -200,6 +240,13 @@ public class VillagerGather : MonoBehaviour {
         choppingTree = false;
         hittingRock = false;
         progressBarObject.SetActive(false);
+    }
+
+    private void doneEatingSleeping() {
+        spriteRenderer.enabled = true;
+        buildingController.beingWorkedOn = false;
+        sleeping = false;
+        eating = false;
     }
 
     private void doneBuilding() {

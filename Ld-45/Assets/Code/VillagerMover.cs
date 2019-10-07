@@ -17,6 +17,8 @@ public class VillagerMover : MonoBehaviour {
     private bool isMoving;
     private Animator animator;
     private bool onWayToGather;
+    private bool onWayToSleep;
+    private bool onWayToEat;
     
     // Init 
 
@@ -56,6 +58,30 @@ public class VillagerMover : MonoBehaviour {
             animator.SetInteger("runningState", 1);
         }
     }
+
+    public void moveToEat(Vector3 newDestination) {
+        destination = newDestination;
+        onWayToEat = true;
+        isMoving = true;
+        if (destination.y > transform.position.y) {
+            animator.SetInteger("runningState", 2);
+        }
+        else {
+            animator.SetInteger("runningState", 1);
+        }
+    }
+
+    public void moveToSleep(Vector3 newDestination) {
+        destination = newDestination;
+        onWayToSleep = true;
+        isMoving = true;
+        if (destination.y > transform.position.y) {
+            animator.SetInteger("runningState", 2);
+        }
+        else {
+            animator.SetInteger("runningState", 1);
+        }
+    }
     
     // Private Functions
 
@@ -66,6 +92,14 @@ public class VillagerMover : MonoBehaviour {
             if (onWayToGather) {
                 gatherScript.arrivedAtBuilding();
                 onWayToGather = false;
+            }
+            else if (onWayToEat) {
+                gatherScript.arrivedAtEat();
+                onWayToEat = false;
+            }
+            else if (onWayToSleep) {
+                gatherScript.arrivedAtSleep();
+                onWayToSleep = false;
             }
         }
     }

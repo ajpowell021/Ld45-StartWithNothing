@@ -29,7 +29,7 @@ public class VillagerClicker : MonoBehaviour {
     // On Mouse Down
     
     private void OnMouseDown() {
-        if (!gather.gathering && !gather.building && !gather.choppingTree && !gather.hittingRock) {
+        if (!gather.isWorkerBusy()) {
             if (inputManager.inputMode == InputMode.PeopleControl) {
                 villagerStats.toggleSelected();
             }

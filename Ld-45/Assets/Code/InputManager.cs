@@ -79,6 +79,40 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void sleepHouseClicked(BuildingController controller) {
+        if (!controller.beingWorkedOn) {
+            int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+            if (selectedVillagerCount == 1) {
+                controller.beingWorkedOn = true;
+                List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+                for (int i = 0; i < movers.Count; i++) {
+                    movers[i].moveToSleep(controller.gameObject.transform.position);
+                    movers[i].GetComponent<VillagerGather>().setBuildingController(controller);
+                }
+                selectionManager.unselectAllVillagers();
+                characterUiManager.unselectAll();
+                selectionManager.unselectAllBuildings();
+            }    
+        }
+    }
+
+    public void eatHouseClicked(BuildingController controller) {
+        if (!controller.beingWorkedOn) {
+            int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
+            if (selectedVillagerCount == 1) {
+                controller.beingWorkedOn = true;
+                List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+                for (int i = 0; i < movers.Count; i++) {
+                    movers[i].moveToEat(controller.gameObject.transform.position);
+                    movers[i].GetComponent<VillagerGather>().setBuildingController(controller);
+                }
+                selectionManager.unselectAllVillagers();
+                characterUiManager.unselectAll();
+                selectionManager.unselectAllBuildings();
+            }     
+        }
+    }
+
     public void buildingSiteClicked(BuildingSiteController controller) {
         int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
         if (selectedVillagerCount > 0) {

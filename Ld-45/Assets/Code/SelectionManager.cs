@@ -148,7 +148,7 @@ public class SelectionManager : MonoBehaviour {
             Vector3 position = villagers[i].transform.position;
             if (position.x >= leftLine && position.x <= rightLine && position.y <= topLine && position.y >= botLine) {
                 VillagerGather gather = villagers[i].GetComponent<VillagerGather>();
-                if (!gather.building && !gather.gathering && !gather.choppingTree && !gather.hittingRock) {
+                if (!gather.isWorkerBusy()) {
                     stats.Add(villagers[i].GetComponent<VillagerStats>());    
                 }
             }

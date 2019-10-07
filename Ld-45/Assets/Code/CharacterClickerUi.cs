@@ -83,7 +83,7 @@ public class CharacterClickerUi : MonoBehaviour {
         GameObject person = selectionManager.getCharacterById(id);
         VillagerGather gather = person.GetComponent<VillagerGather>();
 
-        if (!gather.building && !gather.gathering && !gather.choppingTree && !gather.hittingRock) {
+        if (!gather.isWorkerBusy()) {
             if (!selected) {
                 setSelected(true);
                 selectionManager.selectVillagerById(id);    

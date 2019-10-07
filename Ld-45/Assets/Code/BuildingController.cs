@@ -65,7 +65,9 @@ public class BuildingController : MonoBehaviour {
     public void toggleBuildingSelect() {
         selected = !selected;
         selectedSprite.SetActive(selected);
-        resourceCountObject.SetActive(selected);
+        if (buildingType == BuildingType.Mine || buildingType == BuildingType.LumberYard) {
+            resourceCountObject.SetActive(selected);    
+        }
         radialOne.SetActive(selected);
         radialTwo.SetActive(selected);
         radialThree.SetActive(selected);
@@ -91,13 +93,15 @@ public class BuildingController : MonoBehaviour {
     // On Click
 
     private void OnMouseDown() {
-        if (selected) {
-            toggleBuildingSelect();
+        if (!(buildingType == BuildingType.House && beingWorkedOn)) {
+            if (selected) {
+                toggleBuildingSelect();
+            }
+            else {
+                selectionManager.unselectAllBuildings();
+                toggleBuildingSelect();
+            }
+            inputManager.setInputMode(!selected ? InputMode.PeopleControl : InputMode.BuidlingSelected);    
         }
-        else {
-            selectionManager.unselectAllBuildings();
-            toggleBuildingSelect();
-        }
-        inputManager.setInputMode(!selected ? InputMode.PeopleControl : InputMode.BuidlingSelected);
     }
 }

@@ -14,6 +14,8 @@ public class DataHolder : MonoBehaviour {
     public float mouseDragCooldown;
     public int treeWoodStart;
     public float boatSpeed;
+    public float sleepTime;
+    public float eatTime;
 
     public float timeBetweenBoats;
     public float timeBetweenHunger;

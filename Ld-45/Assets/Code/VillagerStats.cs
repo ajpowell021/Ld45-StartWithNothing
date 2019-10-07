@@ -10,6 +10,7 @@ public class VillagerStats : MonoBehaviour {
     public bool selected;
     public int id;
     public int hungerLevel;
+    public int sleepLevel;
     
     // Private State
 
@@ -62,6 +63,11 @@ public class VillagerStats : MonoBehaviour {
     public void ateFood() {
         hungerLevel = 0;
         characterUiManager.setHungerIcon(id, false);
+    }
+
+    public void slept() {
+        sleepLevel = 0;
+        characterUiManager.setSleepIcon(id, false);
     }
     
     // Private Functions

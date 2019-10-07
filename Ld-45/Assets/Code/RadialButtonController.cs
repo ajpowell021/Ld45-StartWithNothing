@@ -9,7 +9,10 @@ public class RadialButtonController : MonoBehaviour {
         DemolishMine,
         HarvestMine,
         HarvestLumber,
-        DemolishLumber
+        DemolishLumber,
+        DemolishHouse,
+        EatHouse,
+        SleepHouse
     }
     
     public Button buttonType;    
@@ -32,6 +35,7 @@ public class RadialButtonController : MonoBehaviour {
         switch (buttonType) {
             case Button.DemolishLumber:
             case Button.DemolishMine:
+            case Button.DemolishHouse:
                 if (!buildingController.beingWorkedOn) {
                     Destroy(gameObject.transform.parent.gameObject);    
                 }
@@ -39,6 +43,12 @@ public class RadialButtonController : MonoBehaviour {
             case Button.HarvestLumber:
             case Button.HarvestMine:
                 inputManager.buildingClicked(buildingController);
+                break;
+            case Button.EatHouse:
+                inputManager.eatHouseClicked(buildingController);
+                break;
+            case Button.SleepHouse:
+                inputManager.sleepHouseClicked(buildingController);
                 break;
         }
     }
