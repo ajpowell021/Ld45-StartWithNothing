@@ -4324,7 +4324,8 @@ MonoBehaviour:
   sleepTime: 15
   eatTime: 7
   timeBetweenBoats: 60
-  timeBetweenHunger: 10
+  timeBetweenHunger: 18
+  timeBetweenTired: 3
 --- !u!114 &1778255548
 MonoBehaviour:
   m_ObjectHideFlags: 0

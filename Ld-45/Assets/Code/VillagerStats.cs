@@ -16,6 +16,7 @@ public class VillagerStats : MonoBehaviour {
 
     private GameObject marqueeObject;
     private float lastTimeHungerAdvanced;
+    private float lastTimeSleepAdvanced;
 
     // Classes
 
@@ -27,6 +28,7 @@ public class VillagerStats : MonoBehaviour {
     private void Awake() {
         marqueeObject = gameObject.transform.GetChild(0).gameObject;
         lastTimeHungerAdvanced = Time.time;
+        lastTimeSleepAdvanced = Time.time;
     }
 
     private void Start() {
@@ -41,6 +43,12 @@ public class VillagerStats : MonoBehaviour {
             hungerLevel++;
             lastTimeHungerAdvanced = Time.time;
             deathCheck();
+        }
+
+        if (Time.time > lastTimeSleepAdvanced + dataHolder.timeBetweenTired) {
+            sleepLevel++;
+            lastTimeSleepAdvanced = Time.time;
+            sleepCheck();
         }
     }
 
@@ -76,6 +84,16 @@ public class VillagerStats : MonoBehaviour {
         if (hungerLevel > 2) {
             characterUiManager.setHungerIcon(id, true);
         }
+        if (hungerLevel > 5) {
+            // They die here!
+        }
+    }
+
+    private void sleepCheck() {
+        if (sleepLevel > 2) {
+            characterUiManager.setSleepIcon(id, true);
+        }
+
         if (hungerLevel > 5) {
             // They die here!
         }
