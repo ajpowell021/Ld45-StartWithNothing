@@ -107,13 +107,12 @@ public class VillagerGather : MonoBehaviour {
             if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
                 // Finish a round of gathering from tree
                 resourceManager.adjustResource(ResourceType.Wood, 1);
+                
+                timeGatheringStarted = Time.time;
+                treeController.resourcesLeft--;
+                treeController.checkIfEmpty();
                 if (treeController.resourcesLeft == 0) {
                     doneGathering();
-                }
-                else {
-                    timeGatheringStarted = Time.time;
-                    treeController.resourcesLeft--;
-                    treeController.checkIfEmpty();
                 }
             }
         }
@@ -125,13 +124,12 @@ public class VillagerGather : MonoBehaviour {
             if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
                 // Finish a round of gathering from rock
                 resourceManager.adjustResource(ResourceType.Stone, 1);
+                
+                timeGatheringStarted = Time.time;
+                rockController.resourcesLeft--;
+                rockController.checkIfEmpty();
                 if (rockController.resourcesLeft == 0) {
                     doneGathering();
-                }
-                else {
-                    timeGatheringStarted = Time.time;
-                    rockController.resourcesLeft--;
-                    rockController.checkIfEmpty();
                 }
             }
         }
@@ -191,6 +189,9 @@ public class VillagerGather : MonoBehaviour {
                 animator.SetBool("working", true);
                 stats.setSelected(false);
                 enrouteToBuilding = false;
+                if (buildingSiteController.gameObject.transform.position.x < transform.position.x) {
+                    spriteRenderer.flipX = true;
+                }
             }
         }
         else if (enrouteToTree) {
@@ -204,6 +205,9 @@ public class VillagerGather : MonoBehaviour {
                 animator.SetBool("working", true);
                 stats.setSelected(false);
                 enrouteToTree = false;
+                if (treeController.gameObject.transform.position.x < transform.position.x) {
+                    spriteRenderer.flipX = true;
+                }
             }
         }
         else if (enrouteToBoulder) {
@@ -217,6 +221,9 @@ public class VillagerGather : MonoBehaviour {
                 animator.SetBool("working", true);
                 stats.setSelected(false);
                 enrouteToBoulder = false;
+                if (rockController.gameObject.transform.position.x < transform.position.x) {
+                    spriteRenderer.flipX = true;
+                }
             }
         }
         else {
@@ -228,6 +235,9 @@ public class VillagerGather : MonoBehaviour {
                 timeGatheringStarted = Time.time;
                 animator.SetBool("working", true);
                 stats.setSelected(false);
+                if (buildingController.gameObject.transform.position.x < transform.position.x) {
+                    spriteRenderer.flipX = true;
+                }
             }
         }
     }
@@ -287,6 +297,7 @@ public class VillagerGather : MonoBehaviour {
         choppingTree = false;
         hittingRock = false;
         progressBarObject.SetActive(false);
+        spriteRenderer.flipX = false;
     }
 
     private void doneEatingSleeping() {
@@ -301,6 +312,7 @@ public class VillagerGather : MonoBehaviour {
     private void doneBuilding() {
         animator.SetBool("working", false);
         building = false;
+        spriteRenderer.flipX = false;
     }
 
     private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType, CropType cropType) {

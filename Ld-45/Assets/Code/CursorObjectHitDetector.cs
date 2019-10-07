@@ -19,13 +19,13 @@ public class CursorObjectHitDetector : MonoBehaviour {
     // Collisions
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Tree") || other.gameObject.CompareTag("Boulder")) {
+        if (other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Tree") || other.gameObject.CompareTag("Boulder") || other.gameObject.CompareTag("BuildingSite")) {
             cursorManager.adjustCursorColor(false);
         }
     }
 
     private void OnCollisionExit(Collision other) {
-        if (other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Tree") || other.gameObject.CompareTag("Boulder")) {
+        if (other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Tree") || other.gameObject.CompareTag("Boulder") || other.gameObject.CompareTag("BuildingSite")) {
 
             bool hit = false;
             List<GameObject> allBuildings = GameObject.FindGameObjectsWithTag("Building").ToList();

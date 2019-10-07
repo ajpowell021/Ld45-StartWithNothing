@@ -12,6 +12,8 @@ TagManager:
   - CharacterUi
   - Ocean
   - FishingRadial
+  - Island
+  - BuildingSite
   layers:
   - Default
   - TransparentFX
