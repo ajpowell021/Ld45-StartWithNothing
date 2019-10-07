@@ -116,6 +116,17 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void oceanClicked(Vector3 position) {
+        if (inputMode == InputMode.PeopleControl) {
+            List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
+            for (int i = 0; i < movers.Count; i++) {
+                movers[i].move(position, toOcean: true);
+            }
+
+            Instantiate(prefabManager.groundClick, position, Quaternion.identity);    
+        }
+    }
+
     public void setFarmType(CropType type, BuildingController controller) {
         selectionManager.unselectAllBuildings();
         controller.setFarmType(type);

@@ -38,6 +38,7 @@
           <e p="VillagerMover.cs" t="Include" />
           <e p="VillagerStats.cs" t="Include" />
         </e>
+        <e p="OceanClicker.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

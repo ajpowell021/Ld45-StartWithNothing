@@ -10,6 +10,7 @@ TagManager:
   - Tree
   - Boulder
   - CharacterUi
+  - Ocean
   layers:
   - Default
   - TransparentFX
