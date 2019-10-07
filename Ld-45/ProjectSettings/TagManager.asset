@@ -11,6 +11,7 @@ TagManager:
   - Boulder
   - CharacterUi
   - Ocean
+  - FishingRadial
   layers:
   - Default
   - TransparentFX

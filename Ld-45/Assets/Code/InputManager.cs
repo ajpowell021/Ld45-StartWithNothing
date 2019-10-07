@@ -8,6 +8,9 @@ public class InputManager : MonoBehaviour {
     // Public State
 
     public InputMode inputMode;
+    public bool fishingRadialActive;
+
+    public GameObject fishingRadial;
 
     // Classes
 
@@ -40,6 +43,10 @@ public class InputManager : MonoBehaviour {
             cursorManager.cancelBuild();
             inputMode = InputMode.PeopleControl;
             characterUiManager.unselectAll();
+            if (fishingRadialActive) {
+                Destroy(fishingRadial);
+                fishingRadialActive = false;
+            }
         } 
         else if (Input.GetKeyDown(KeyCode.P)) {
             resourceManager.adjustResource(ResourceType.Food, 10);
@@ -64,6 +71,10 @@ public class InputManager : MonoBehaviour {
         else if (inputMode == InputMode.Build) {
             cursorManager.buildTheBuildingOnCursor();
         }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
+        }
     }
 
     public void buildingClicked(BuildingController building) {
@@ -76,6 +87,10 @@ public class InputManager : MonoBehaviour {
             }
             selectionManager.unselectAllVillagers();
             characterUiManager.unselectAll();
+        }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
         }
     }
 
@@ -94,6 +109,10 @@ public class InputManager : MonoBehaviour {
                 selectionManager.unselectAllBuildings();
                 controller.setSleeping(true);
             }    
+        }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
         }
     }
 
@@ -114,9 +133,13 @@ public class InputManager : MonoBehaviour {
                 controller.setEating(true);
             }     
         }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
+        }
     }
 
-    public void oceanClicked(Vector3 position) {
+    public void fishingButtonClicked(Vector3 position) {
         if (inputMode == InputMode.PeopleControl) {
             List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
             for (int i = 0; i < movers.Count; i++) {
@@ -124,6 +147,10 @@ public class InputManager : MonoBehaviour {
             }
 
             Instantiate(prefabManager.groundClick, position, Quaternion.identity);    
+        }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
         }
     }
 
@@ -144,6 +171,10 @@ public class InputManager : MonoBehaviour {
             selectionManager.unselectAllVillagers();
             characterUiManager.unselectAll();
         }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
+        }
     }
 
     public void treeClicked(TreeController controller) {
@@ -158,6 +189,10 @@ public class InputManager : MonoBehaviour {
             selectionManager.unselectAllVillagers();
             characterUiManager.unselectAll();
         }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
+        }
     }
 
     public void boulderClicked(RockController controller) {
@@ -171,6 +206,10 @@ public class InputManager : MonoBehaviour {
             }
             selectionManager.unselectAllVillagers();
             characterUiManager.unselectAll();
+        }
+        if (fishingRadialActive) {
+            Destroy(fishingRadial);
+            fishingRadialActive = false;
         }
     }
 

@@ -18,7 +18,8 @@ public class RadialButtonController : MonoBehaviour {
         PlantCotton,
         DemolishFarm,
         HarvestFarm,
-        UpgradeFarm
+        UpgradeFarm,
+        Fish
     }
     
     public Button buttonType;    
@@ -30,7 +31,9 @@ public class RadialButtonController : MonoBehaviour {
     private BuildingController buildingController;
 
     private void Awake() {
-        buildingController = gameObject.transform.parent.gameObject.GetComponent<BuildingController>();
+        if (buttonType != Button.Fish) {
+            buildingController = gameObject.transform.parent.gameObject.GetComponent<BuildingController>();    
+        }
     }
 
     private void Start() {
@@ -68,6 +71,9 @@ public class RadialButtonController : MonoBehaviour {
                 inputManager.setFarmType(CropType.Cotton, buildingController);
                 break;
             case Button.UpgradeFarm:
+                break;
+            case Button.Fish:
+                inputManager.fishingButtonClicked(transform.position);
                 break;
         }
     }

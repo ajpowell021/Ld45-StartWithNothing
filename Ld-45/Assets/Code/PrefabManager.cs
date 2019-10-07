@@ -31,6 +31,8 @@ public class PrefabManager : MonoBehaviour {
     public GameObject rockThree;
     public GameObject rockFour;
 
+    public GameObject fishingRadial;
+
     // Public Functions
 
     public GameObject getPrefabFromBuildingType(BuildingType type) {
