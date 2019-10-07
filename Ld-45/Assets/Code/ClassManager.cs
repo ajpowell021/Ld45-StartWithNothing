@@ -24,6 +24,7 @@ public class ClassManager : MonoBehaviour {
     public PopupController popupController;
     public CharacterUiManager characterUiManager;
     public WinManager winManager;
+    public GraveyardManager graveyardManager;
     
     // Init
 
@@ -60,5 +61,6 @@ public class ClassManager : MonoBehaviour {
         popupController = gameObject.GetComponent<PopupController>();
         characterUiManager = gameObject.GetComponent<CharacterUiManager>();
         winManager = gameObject.GetComponent<WinManager>();
+        graveyardManager = gameObject.GetComponent<GraveyardManager>();
     }
 }

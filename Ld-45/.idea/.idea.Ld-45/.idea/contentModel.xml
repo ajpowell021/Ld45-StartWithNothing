@@ -20,6 +20,7 @@
           <e p="CursorObjectHitDetector.cs" t="Include" />
           <e p="DataHolder.cs" t="Include" />
           <e p="Enums.cs" t="Include" />
+          <e p="GraveyardManager.cs" t="Include" />
           <e p="HudController.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="IslandClicker.cs" t="Include" />

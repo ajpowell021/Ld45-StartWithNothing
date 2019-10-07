@@ -11,6 +11,7 @@ public class VillagerStats : MonoBehaviour {
     public int id;
     public int hungerLevel;
     public int sleepLevel;
+    public bool dead;
     
     // Private State
 
@@ -22,11 +23,14 @@ public class VillagerStats : MonoBehaviour {
 
     private DataHolder dataHolder;
     private CharacterUiManager characterUiManager;
+    private GraveyardManager graveyardManager;
+    private SpriteRenderer sr;
     
     // Init
 
     private void Awake() {
         marqueeObject = gameObject.transform.GetChild(0).gameObject;
+        sr = gameObject.GetComponent<SpriteRenderer>();
         lastTimeHungerAdvanced = Time.time;
         lastTimeSleepAdvanced = Time.time;
     }
@@ -34,21 +38,24 @@ public class VillagerStats : MonoBehaviour {
     private void Start() {
         dataHolder = ClassManager.instance.dataHolder;
         characterUiManager = ClassManager.instance.characterUiManager;
+        graveyardManager = ClassManager.instance.graveyardManager;
     }
 
     // Update
 
     private void Update() {
-        if (Time.time > lastTimeHungerAdvanced + dataHolder.timeBetweenHunger) {
-            hungerLevel++;
-            lastTimeHungerAdvanced = Time.time;
-            deathCheck();
-        }
+        if (!dead) {
+            if (Time.time > lastTimeHungerAdvanced + dataHolder.timeBetweenHunger) {
+                hungerLevel++;
+                lastTimeHungerAdvanced = Time.time;
+                deathCheck();
+            }
 
-        if (Time.time > lastTimeSleepAdvanced + dataHolder.timeBetweenTired) {
-            sleepLevel++;
-            lastTimeSleepAdvanced = Time.time;
-            sleepCheck();
+            if (Time.time > lastTimeSleepAdvanced + dataHolder.timeBetweenTired) {
+                sleepLevel++;
+                lastTimeSleepAdvanced = Time.time;
+                sleepCheck();
+            }    
         }
     }
 
@@ -85,7 +92,11 @@ public class VillagerStats : MonoBehaviour {
             characterUiManager.setHungerIcon(id, true);
         }
         if (hungerLevel > 5) {
-            // They die here!
+            graveyardManager.died(gameObject);
+            sr.enabled = false;
+            dead = true;
+            setSelected(false);
+            characterUiManager.died(id);
         }
     }
 
@@ -95,7 +106,11 @@ public class VillagerStats : MonoBehaviour {
         }
 
         if (hungerLevel > 5) {
-            // They die here!
+            graveyardManager.died(gameObject);
+            sr.enabled = false;
+            dead = true;
+            setSelected(false);
+            characterUiManager.died(id);
         }
     }
 }

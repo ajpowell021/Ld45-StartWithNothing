@@ -279,7 +279,7 @@ public class VillagerGather : MonoBehaviour {
     }
 
     public bool isWorkerBusy() {
-        if (!sleeping && !eating && !gathering && !building && !hittingRock && !choppingTree) {
+        if (!sleeping && !eating && !gathering && !building && !hittingRock && !choppingTree && !stats.dead) {
             return false;
         }
 

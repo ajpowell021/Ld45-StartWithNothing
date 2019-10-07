@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class CharacterUiManager : MonoBehaviour {
@@ -41,6 +42,13 @@ public class CharacterUiManager : MonoBehaviour {
 
     public void setSleepIcon(int id, bool value) {
         uiObjects[id - 1].transform.GetChild(2).gameObject.SetActive(value);
+    }
+
+    public void died(int id) {
+        characterSelected(id, false);
+        uiObjects[id - 1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "DIED";
+        setSleepIcon(id, false);
+        setHungerIcon(id, false);
     }
 }
  

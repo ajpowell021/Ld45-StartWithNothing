@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
     
@@ -19,6 +20,7 @@ public class InputManager : MonoBehaviour {
     public CursorManager cursorManager;
     public CharacterUiManager characterUiManager;
     public ResourceManager resourceManager;
+    public GraveyardManager graveyardManager;
 
     // Init
 
@@ -32,6 +34,7 @@ public class InputManager : MonoBehaviour {
         cursorManager = ClassManager.instance.cursorManager;
         characterUiManager = ClassManager.instance.characterUiManager;
         resourceManager = ClassManager.instance.resourceManager;
+        graveyardManager = ClassManager.instance.graveyardManager;
     }
     
     // Update
@@ -53,6 +56,11 @@ public class InputManager : MonoBehaviour {
             resourceManager.adjustResource(ResourceType.Wood, 100);
             resourceManager.adjustResource(ResourceType.Stone, 100);
             resourceManager.adjustResource(ResourceType.Cotton, 100);
+        }
+        else if (graveyardManager.lost) {
+            if (Input.GetKeyDown(KeyCode.R)) {
+                SceneManager.LoadScene("TitleScene");
+            }
         }
     }
 
