@@ -15,6 +15,9 @@ public class GraveyardManager : MonoBehaviour {
 
     private SpriteRenderer sr;
 
+    private TipManager tipManager;
+    private InputManager inputManager;
+
     public int currentCharacters;
     public int deaths;
 
@@ -25,6 +28,8 @@ public class GraveyardManager : MonoBehaviour {
 
     private void Start() {
         sr = graveyard.GetComponent<SpriteRenderer>();
+        tipManager = ClassManager.instance.tipManager;
+        inputManager = ClassManager.instance.inputManager;
     }
 
     public void died(GameObject person) {
@@ -47,8 +52,10 @@ public class GraveyardManager : MonoBehaviour {
         }
 
         if (deaths == currentCharacters) {
+            tipManager.addNewTip("Press R to restart");
             losePanel.SetActive(true);
             lost = true;
+            inputManager.setInputMode(InputMode.GameOver);
         }
     }
 }

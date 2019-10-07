@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: 4535547774427628920
     second: lumber_radial_7
+  - first:
+      213: 6065937869524395874
+    second: lumber_radial_8
+  - first:
+      213: -7554917872350582297
+    second: lumber_radial_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -115,7 +121,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b56784a5a42632e4a8ca6ab34df6ece6
+      spriteID: 024ea6a963341494bb92b5a7add6105c
       internalID: -2768846878219203633
       vertices: []
       indices: 
@@ -134,9 +140,9 @@ TextureImporter:
       name: lumber_radial_1
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3faa87f8d4163104b8af130927c70504
+      spriteID: e1080ccbf9252a143b0eadf4a181bd18
       internalID: -5299008998796581348
       vertices: []
       indices: 
@@ -155,9 +161,9 @@ TextureImporter:
       name: lumber_radial_2
       rect:
         serializedVersion: 2
-        x: 92
+        x: 94
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431e3361b21321646804792ef14f53f5
+      spriteID: f3ec43a1aa31427488ca19129110c1d1
       internalID: -4998316338824049488
       vertices: []
       indices: 
@@ -176,9 +182,9 @@ TextureImporter:
       name: lumber_radial_3
       rect:
         serializedVersion: 2
-        x: 138
+        x: 141
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5735fd73e03b60547ab869a7c5e6b5de
+      spriteID: 0ebabaf7af787fb45b20a38ac1c9a777
       internalID: -8237029119839390097
       vertices: []
       indices: 
@@ -197,9 +203,9 @@ TextureImporter:
       name: lumber_radial_4
       rect:
         serializedVersion: 2
-        x: 184
+        x: 188
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a80208adc5720ac49b7d2dbe4092e2a2
+      spriteID: ca15f1071061da74fa1ea05f8b49d54c
       internalID: -3645512247429583962
       vertices: []
       indices: 
@@ -218,9 +224,9 @@ TextureImporter:
       name: lumber_radial_5
       rect:
         serializedVersion: 2
-        x: 230
+        x: 235
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f83e2db524825d42a100e959a56fda2
+      spriteID: 559e6ef59e0e00f43954c7e7f24875b3
       internalID: -1954721729481074677
       vertices: []
       indices: 
@@ -239,9 +245,9 @@ TextureImporter:
       name: lumber_radial_6
       rect:
         serializedVersion: 2
-        x: 276
+        x: 282
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,7 +256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b872afc1954674046b7cd654e51c7544
+      spriteID: 7a02b03a8190a374da86e1ac068f241f
       internalID: 426720870789303829
       vertices: []
       indices: 
@@ -260,9 +266,9 @@ TextureImporter:
       name: lumber_radial_7
       rect:
         serializedVersion: 2
-        x: 322
+        x: 329
         y: 0
-        width: 46
+        width: 47
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +277,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71591aee901a4c444834ef2122a545ba
+      spriteID: 02ea190d6844066438471807ff8d46c6
       internalID: 4535547774427628920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumber_radial_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d707216768f87974192b2e72670be331
+      internalID: 6065937869524395874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lumber_radial_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6701bfcd82a6bf47a9f4f0eb617c6f2
+      internalID: -7554917872350582297
       vertices: []
       indices: 
       edges: []

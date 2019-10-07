@@ -109,9 +109,14 @@ public class VillagerGather : MonoBehaviour {
                 resourceManager.adjustResource(ResourceType.Wood, 1);
                 
                 timeGatheringStarted = Time.time;
-                treeController.resourcesLeft--;
-                treeController.checkIfEmpty();
-                if (treeController.resourcesLeft == 0) {
+                if (treeController != null) {
+                    treeController.resourcesLeft--;
+                    treeController.checkIfEmpty();
+                    if (treeController.resourcesLeft == 0) {
+                        doneGathering();
+                    }    
+                }
+                else {
                     doneGathering();
                 }
             }
@@ -126,9 +131,14 @@ public class VillagerGather : MonoBehaviour {
                 resourceManager.adjustResource(ResourceType.Stone, 1);
                 
                 timeGatheringStarted = Time.time;
-                rockController.resourcesLeft--;
-                rockController.checkIfEmpty();
-                if (rockController.resourcesLeft == 0) {
+                if (rockController != null) {
+                    rockController.resourcesLeft--;
+                    rockController.checkIfEmpty();
+                    if (rockController.resourcesLeft == 0) {
+                        doneGathering();
+                    }    
+                }
+                else {
                     doneGathering();
                 }
             }
@@ -149,8 +159,13 @@ public class VillagerGather : MonoBehaviour {
             if (Time.time > timeBuildingStarted + dataHolder.workerGatherTime) {
                 // Finish a round of building
                 timeBuildingStarted = Time.time;
-                buildingSiteController.doWork();
-                if (buildingSiteController.donePercent == 100) {
+                if (buildingSiteController != null) {
+                    buildingSiteController.doWork();
+                    if (buildingSiteController.donePercent >= 100) {
+                        doneBuilding();
+                    }
+                }
+                else {
                     doneBuilding();
                 }
             }

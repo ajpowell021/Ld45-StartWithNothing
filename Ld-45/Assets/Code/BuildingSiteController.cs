@@ -44,9 +44,11 @@ public class BuildingSiteController : MonoBehaviour {
 
     public void doWork() {
         donePercent += 10;
-        progressBar.adjustPercent(10);
-        if (donePercent == 100) {
+        if (donePercent >= 100) {
             finishedBuilding();
+        }
+        else {
+            progressBar.adjustPercent(10);
         }
     }
 

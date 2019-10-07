@@ -1408,7 +1408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: cfe0d5d2cacfd4141b9c43d2b7f034aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5176,7 +5176,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: 996bb76c5f0d09d4cb6a624f125501b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6817,8 +6817,8 @@ MonoBehaviour:
   sleepTime: 15
   eatTime: 7
   timeBetweenBoats: 60
-  timeBetweenHunger: 18
-  timeBetweenTired: 30
+  timeBetweenHunger: 25
+  timeBetweenTired: 40
   woodToWin: 100
   cottonToWin: 100
   stoneToWin: 100

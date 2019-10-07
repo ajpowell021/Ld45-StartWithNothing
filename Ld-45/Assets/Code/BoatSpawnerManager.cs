@@ -30,6 +30,7 @@ public class BoatSpawnerManager : MonoBehaviour {
                 graveyardManager.currentCharacters++;
                 Instantiate(prefabManager.boat, new Vector3(20, -7, 0), Quaternion.identity);
                 timeOfLastSpawn = Time.time;
+                dataHolder.timeBetweenBoats += 20;
             }    
         }
     }

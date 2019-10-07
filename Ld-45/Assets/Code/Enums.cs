@@ -13,7 +13,8 @@ public enum BuildingType {
 public enum InputMode {
     PeopleControl,
     Build,
-    BuidlingSelected
+    BuidlingSelected,
+    GameOver
 }
 
 public enum ResourceType {

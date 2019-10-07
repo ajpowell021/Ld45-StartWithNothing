@@ -40,24 +40,26 @@ public class InputManager : MonoBehaviour {
     // Update
 
     private void Update() {
-        if (Input.GetMouseButton(1)) {
-            selectionManager.unselectAllVillagers();
-            selectionManager.unselectAllBuildings();
-            cursorManager.cancelBuild();
-            inputMode = InputMode.PeopleControl;
-            characterUiManager.unselectAll();
-            if (fishingRadialActive) {
-                Destroy(fishingRadial);
-                fishingRadialActive = false;
-            }
-        } 
-        else if (Input.GetKeyDown(KeyCode.P)) {
-            resourceManager.adjustResource(ResourceType.Food, 100);
-            resourceManager.adjustResource(ResourceType.Wood, 100);
-            resourceManager.adjustResource(ResourceType.Stone, 100);
-            resourceManager.adjustResource(ResourceType.Cotton, 100);
+        if (!graveyardManager.lost) {
+            if (Input.GetMouseButton(1)) {
+                selectionManager.unselectAllVillagers();
+                selectionManager.unselectAllBuildings();
+                cursorManager.cancelBuild();
+                inputMode = InputMode.PeopleControl;
+                characterUiManager.unselectAll();
+                if (fishingRadialActive) {
+                    Destroy(fishingRadial);
+                    fishingRadialActive = false;
+                }
+            } 
+            else if (Input.GetKeyDown(KeyCode.P)) {
+                resourceManager.adjustResource(ResourceType.Food, 100);
+                resourceManager.adjustResource(ResourceType.Wood, 100);
+                resourceManager.adjustResource(ResourceType.Stone, 100);
+                resourceManager.adjustResource(ResourceType.Cotton, 100);
+            }    
         }
-        else if (graveyardManager.lost) {
+        else {
             if (Input.GetKeyDown(KeyCode.R)) {
                 SceneManager.LoadScene("TitleScene");
             }
