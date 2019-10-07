@@ -6784,8 +6784,8 @@ MonoBehaviour:
   food: 0
   mineCost: 8
   lumberYardCost: 8
-  farmCost: 0
-  houseCost: 0
+  farmCost: 5
+  houseCost: 5
 --- !u!114 &1778255552
 MonoBehaviour:
   m_ObjectHideFlags: 0

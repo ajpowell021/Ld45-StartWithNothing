@@ -53,6 +53,6 @@ public class TipManager : MonoBehaviour {
     
     private IEnumerator chopAndCut() {
         yield return new WaitForSeconds(10);
-        addNewTip("Trees and rocks can be harvested");
+        addNewTip("Trees and rocks are useful");
     }
 }

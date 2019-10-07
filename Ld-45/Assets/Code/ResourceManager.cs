@@ -73,4 +73,22 @@ public class ResourceManager : MonoBehaviour {
 
         return false;
     }
+
+    public bool canAffordHouse() {
+        if (wood > houseCost) {
+            adjustResource(ResourceType.Wood, -houseCost);
+            return true;
+        }
+
+        return false;
+    }
+    
+    public bool canAffordFarm() {
+        if (stone > farmCost) {
+            adjustResource(ResourceType.Stone, -farmCost);
+            return true;
+        }
+
+        return false;
+    }
 }

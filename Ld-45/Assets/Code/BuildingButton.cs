@@ -36,8 +36,15 @@ public class BuildingButton : MonoBehaviour {
                 hudController.build(buttonType);
             }
         }
-        else {
-            hudController.build(buttonType);
+        else if (buttonType == BuildingType.Farm) {
+            if (resourceManager.canAffordFarm()) {
+                hudController.build(buttonType);
+            }
+        }
+        else if (buttonType == BuildingType.House) {
+            if (resourceManager.canAffordHouse()) {
+                hudController.build(buttonType);
+            }
         }
     }
 
@@ -56,11 +63,11 @@ public class BuildingButton : MonoBehaviour {
             case BuildingType.LumberYard:
                 return "Build a lumber yard for 8 stones.";
             case BuildingType.Farm:
-                return "Build a farm for free.";
+                return "Build a farm for 5 stones.";
             case BuildingType.Mine:
                 return "Build a mine for 8 wood.";
             case BuildingType.House:
-                return "Build a house for free";
+                return "Build a house for 5 wood.";
         }
 
         return "Error!";
