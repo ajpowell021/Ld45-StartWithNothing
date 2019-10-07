@@ -57,10 +57,20 @@ public class ResourceManager : MonoBehaviour {
     }
 
     public bool canAffordMine() {
-        return wood > mineCost;
+        if (wood > mineCost) {
+            adjustResource(ResourceType.Wood, -mineCost);
+            return true;
+        }
+
+        return false;
     }
 
     public bool canAffordLumberYard() {
-        return stone > lumberYardCost;
+        if (stone > lumberYardCost) {
+            adjustResource(ResourceType.Stone, -lumberYardCost);
+            return true;
+        }
+
+        return false;
     }
 }
