@@ -12,7 +12,13 @@ public class RadialButtonController : MonoBehaviour {
         DemolishLumber,
         DemolishHouse,
         EatHouse,
-        SleepHouse
+        SleepHouse,
+        PlantCorn,
+        PlantStrawberry,
+        PlantCotton,
+        DemolishFarm,
+        HarvestFarm,
+        UpgradeFarm
     }
     
     public Button buttonType;    
@@ -36,12 +42,14 @@ public class RadialButtonController : MonoBehaviour {
             case Button.DemolishLumber:
             case Button.DemolishMine:
             case Button.DemolishHouse:
+            case Button.DemolishFarm:
                 if (!buildingController.beingWorkedOn) {
                     Destroy(gameObject.transform.parent.gameObject);    
                 }
                 break;
             case Button.HarvestLumber:
             case Button.HarvestMine:
+            case Button.HarvestFarm:
                 inputManager.buildingClicked(buildingController);
                 break;
             case Button.EatHouse:
@@ -49,6 +57,17 @@ public class RadialButtonController : MonoBehaviour {
                 break;
             case Button.SleepHouse:
                 inputManager.sleepHouseClicked(buildingController);
+                break;
+            case Button.PlantCorn:
+                inputManager.setFarmType(CropType.Corn, buildingController);
+                break;
+            case Button.PlantStrawberry:
+                inputManager.setFarmType(CropType.Strawberry, buildingController);
+                break;
+            case Button.PlantCotton:
+                inputManager.setFarmType(CropType.Cotton, buildingController);
+                break;
+            case Button.UpgradeFarm:
                 break;
         }
     }

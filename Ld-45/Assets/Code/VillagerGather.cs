@@ -59,7 +59,7 @@ public class VillagerGather : MonoBehaviour {
 
             if (Time.time > timeGatheringStarted + dataHolder.workerGatherTime) {
                 // Finish a round of gathering
-                resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType), 1);
+                resourceManager.adjustResource(getResourceTypeFromBuildingType(buildingController.buildingType, buildingController.farmType), 1);
                 buildingController.updateResourceCountUi();
                 if (buildingController.currentResourcesHeld == 0) {
                     doneGathering();    
@@ -256,12 +256,12 @@ public class VillagerGather : MonoBehaviour {
         building = false;
     }
 
-    private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType) {
+    private ResourceType getResourceTypeFromBuildingType(BuildingType buildingType, CropType cropType) {
         switch (buildingType) {
             case BuildingType.LumberYard:
                 return ResourceType.Wood;
             case BuildingType.Farm:
-                return ResourceType.Food;
+                return cropType == CropType.Cotton ? ResourceType.Cotton : ResourceType.Food;
             case BuildingType.Mine:
                 return ResourceType.Stone;
             case BuildingType.House:

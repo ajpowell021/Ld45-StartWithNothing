@@ -23,6 +23,13 @@ public enum ResourceType {
     Cotton
 }
 
+public enum CropType {
+    Strawberry,
+    Corn,
+    Cotton,
+    None
+}
+
 public enum RadialButtonType {
     
 }

@@ -116,6 +116,11 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+    public void setFarmType(CropType type, BuildingController controller) {
+        selectionManager.unselectAllBuildings();
+        controller.setFarmType(type);
+    }
+
     public void buildingSiteClicked(BuildingSiteController controller) {
         int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
         if (selectedVillagerCount > 0) {
