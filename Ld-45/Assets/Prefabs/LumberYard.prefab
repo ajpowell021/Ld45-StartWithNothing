@@ -117,6 +117,10 @@ MonoBehaviour:
   selected: 0
   buildingType: 0
   currentResourcesHeld: 0
+  cottonSprite: {fileID: 0}
+  cornSprite: {fileID: 0}
+  strawberrySprite: {fileID: 0}
+  farmType: 3
   beingWorkedOn: 0
 --- !u!1 &7759891352879081178
 GameObject:

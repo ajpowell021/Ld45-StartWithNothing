@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Code/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/BuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Enums.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/RadialButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/RadialButtonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/VillagerGather.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/VillagerGather.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Farm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Farm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/farm_radial.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Raw-Art/farm_radial.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Raw-Art/farm_radial_plant.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Raw-Art/farm_radial_plant.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,34 +29,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/BuildingController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="651">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
-                <marker date="1570413873044" expanded="true" signature="6:105" ph="..." />
-                <marker date="1570413873044" expanded="true" signature="155:5051" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="1018:1767" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="1476:1625" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="1674:1761" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="1794:2021" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2068:2394" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2142:2388" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2235:2378" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2464:3694" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2630:2698" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2780:2846" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2887:2942" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2942:3536" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="2970:3081" ph="/* It is a farm and we already picked a crop type ... */" />
-                <marker date="1570413873044" expanded="true" signature="3723:4150" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4050:4111" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4196:4346" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4388:4431" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4471:4514" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4559:4591" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4641:5049" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4711:5043" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4739:4794" ph="{...}" />
-                <marker date="1570413873044" expanded="true" signature="4794:4924" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="6:105" ph="..." />
+                <marker date="1570413994417" expanded="true" signature="155:5588" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="1061:1878" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="1587:1736" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="1785:1872" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="1905:2132" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2179:2505" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2253:2499" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2346:2489" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2575:3805" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2741:2809" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2891:2957" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="2998:3053" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="3053:3647" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="3081:3192" ph="/* It is a farm and we already picked a crop type ... */" />
+                <marker date="1570413994417" expanded="true" signature="3834:4261" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4161:4222" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4307:4457" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4499:4542" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4582:4625" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4670:5128" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="4719:5122" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="5178:5586" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="5248:5580" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="5276:5331" ph="{...}" />
+                <marker date="1570413994417" expanded="true" signature="5331:5461" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -245,7 +238,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OnMouseDr</find>
       <find>setBuildingType</find>
       <find>doWork</find>
       <find>gathering</find>
@@ -275,6 +267,7 @@
       <find>radialThree</find>
       <find>buildingtype =</find>
       <find>straw</find>
+      <find>setFarm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -421,7 +414,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70132000" />
+    <option name="totallyTimeSpent" value="70851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1126,34 +1119,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/BuildingController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="651">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
-            <marker date="1570413873044" expanded="true" signature="6:105" ph="..." />
-            <marker date="1570413873044" expanded="true" signature="155:5051" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="1018:1767" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="1476:1625" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="1674:1761" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="1794:2021" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2068:2394" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2142:2388" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2235:2378" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2464:3694" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2630:2698" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2780:2846" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2887:2942" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2942:3536" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="2970:3081" ph="/* It is a farm and we already picked a crop type ... */" />
-            <marker date="1570413873044" expanded="true" signature="3723:4150" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4050:4111" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4196:4346" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4388:4431" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4471:4514" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4559:4591" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4641:5049" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4711:5043" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4739:4794" ph="{...}" />
-            <marker date="1570413873044" expanded="true" signature="4794:4924" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="6:105" ph="..." />
+            <marker date="1570413994417" expanded="true" signature="155:5588" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="1061:1878" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="1587:1736" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="1785:1872" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="1905:2132" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2179:2505" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2253:2499" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2346:2489" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2575:3805" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2741:2809" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2891:2957" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="2998:3053" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="3053:3647" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="3081:3192" ph="/* It is a farm and we already picked a crop type ... */" />
+            <marker date="1570413994417" expanded="true" signature="3834:4261" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4161:4222" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4307:4457" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4499:4542" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4582:4625" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4670:5128" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="4719:5122" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="5178:5586" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="5248:5580" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="5276:5331" ph="{...}" />
+            <marker date="1570413994417" expanded="true" signature="5331:5461" ph="{...}" />
           </folding>
         </state>
       </provider>
