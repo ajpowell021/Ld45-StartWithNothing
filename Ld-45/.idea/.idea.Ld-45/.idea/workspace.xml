@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="" />
+    <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BuildingSite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BuildingSite.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Farm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Farm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FishRadialAnim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FishRadialAnim.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GroundClick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GroundClick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/House.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LumberYard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LumberYard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SelectorBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SelectorBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stone 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stone 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stone 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stone 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stone 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stone 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Villager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Villager.prefab" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +121,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/ResourceManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -155,11 +173,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Code/TipManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            <state relative-caret-position="217">
+              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
                 <marker date="1570461391517" expanded="true" signature="6:105" ph="..." />
                 <marker date="1570461391517" expanded="true" signature="147:1616" ph="{...}" />
@@ -505,12 +523,12 @@
       <workItem from="1570227761858" duration="6130000" />
       <workItem from="1570286395391" duration="33872000" />
       <workItem from="1570373365246" duration="12331000" />
-      <workItem from="1570454941551" duration="4537000" />
+      <workItem from="1570454941551" duration="5147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88500000" />
+    <option name="totallyTimeSpent" value="89110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1350,29 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Code/ResourceManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-          <folding>
-            <marker date="1570460475292" expanded="true" signature="6:92" ph="..." />
-            <marker date="1570460475292" expanded="true" signature="139:2139" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="464:569" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="607:703" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="792:1356" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="816:1299" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1390:1544" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1421:1515" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1584:1752" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1622:1723" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1787:1943" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1819:1914" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="1981:2137" ph="{...}" />
-            <marker date="1570460475292" expanded="true" signature="2013:2108" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/BuildingButton.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
@@ -1400,8 +1395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Code/TipManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+        <state relative-caret-position="217">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding>
             <marker date="1570461391517" expanded="true" signature="6:105" ph="..." />
             <marker date="1570461391517" expanded="true" signature="147:1616" ph="{...}" />
@@ -1414,6 +1409,29 @@
             <marker date="1570461391517" expanded="true" signature="1165:1302" ph="{...}" />
             <marker date="1570461391517" expanded="true" signature="1345:1481" ph="{...}" />
             <marker date="1570461391517" expanded="true" signature="1517:1614" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Code/ResourceManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+          <folding>
+            <marker date="1570460475292" expanded="true" signature="6:92" ph="..." />
+            <marker date="1570460475292" expanded="true" signature="139:2139" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="464:569" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="607:703" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="792:1356" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="816:1299" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1390:1544" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1421:1515" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1584:1752" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1622:1723" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1787:1943" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1819:1914" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="1981:2137" ph="{...}" />
+            <marker date="1570460475292" expanded="true" signature="2013:2108" ph="{...}" />
           </folding>
         </state>
       </provider>

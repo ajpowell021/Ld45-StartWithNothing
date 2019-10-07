@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 5f959afea34c9b3409ec8ff1d5a312b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 5271930799678228120, guid: c2ea1722c3b37e34b98a0fad5ee6c931,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -333,16 +333,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610206371122384567}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -398,15 +388,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -425,16 +425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610206371122384567}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -490,15 +480,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -517,16 +517,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610206371122384567}
     m_Modifications:
-    - target: {fileID: 9132353663967583363, guid: 0d7a87951290c8c4f9e8def50a9c5933,
-        type: 3}
-      propertyPath: m_Name
-      value: MineRadialAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 9132353663967583363, guid: 0d7a87951290c8c4f9e8def50a9c5933,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9132353663967583366, guid: 0d7a87951290c8c4f9e8def50a9c5933,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,10 +572,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9132353663967583363, guid: 0d7a87951290c8c4f9e8def50a9c5933,
+        type: 3}
+      propertyPath: m_Name
+      value: MineRadialAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132353663967583363, guid: 0d7a87951290c8c4f9e8def50a9c5933,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9132353663967583365, guid: 0d7a87951290c8c4f9e8def50a9c5933,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d7a87951290c8c4f9e8def50a9c5933, type: 3}
@@ -602,16 +602,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610206371122384567}
     m_Modifications:
-    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_Name
-      value: ResourceCountCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7337318941492046378, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -717,20 +707,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2242738622922134801, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00006610155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_Name
+      value: ResourceCountCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3757671406870551354, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7691920644396525356, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2242738622922134801, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00006610155
       objectReference: {fileID: 0}
     - target: {fileID: 4118080500468557059, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
@@ -767,16 +767,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610206371122384567}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,15 +822,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

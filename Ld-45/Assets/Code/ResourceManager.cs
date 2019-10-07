@@ -57,7 +57,7 @@ public class ResourceManager : MonoBehaviour {
     }
 
     public bool canAffordMine() {
-        if (wood > mineCost) {
+        if (wood >= mineCost) {
             adjustResource(ResourceType.Wood, -mineCost);
             return true;
         }
@@ -66,7 +66,7 @@ public class ResourceManager : MonoBehaviour {
     }
 
     public bool canAffordLumberYard() {
-        if (stone > lumberYardCost) {
+        if (stone >= lumberYardCost) {
             adjustResource(ResourceType.Stone, -lumberYardCost);
             return true;
         }
@@ -75,7 +75,7 @@ public class ResourceManager : MonoBehaviour {
     }
 
     public bool canAffordHouse() {
-        if (wood > houseCost) {
+        if (wood >= houseCost) {
             adjustResource(ResourceType.Wood, -houseCost);
             return true;
         }
@@ -84,7 +84,7 @@ public class ResourceManager : MonoBehaviour {
     }
     
     public bool canAffordFarm() {
-        if (stone > farmCost) {
+        if (stone >= farmCost) {
             adjustResource(ResourceType.Stone, -farmCost);
             return true;
         }

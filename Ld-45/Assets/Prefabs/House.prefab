@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 791142170484754063, guid: 8ae81e100d69d1745bb135e6042ee60b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 585c108d2f861454aa37bb8361613d04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -296,7 +296,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 5271930799678228120, guid: c2ea1722c3b37e34b98a0fad5ee6c931,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -335,16 +335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_Name
-      value: ResourceCountCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7337318941492046378, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,20 +440,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2242738622922134801, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00006610155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_Name
+      value: ResourceCountCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196735802019284104, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3757671406870551354, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7691920644396525356, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2242738622922134801, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00006610155
       objectReference: {fileID: 0}
     - target: {fileID: 4118080500468557059, guid: c5f818b184bd7ab4bbfffe745aaa6a59,
         type: 3}
@@ -500,16 +500,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 501390808638444872, guid: debc85a53b756fb448054e8170a9d628,
-        type: 3}
-      propertyPath: m_Name
-      value: SleepAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 501390808638444872, guid: debc85a53b756fb448054e8170a9d628,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 501390808638444869, guid: debc85a53b756fb448054e8170a9d628,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,6 +555,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 501390808638444872, guid: debc85a53b756fb448054e8170a9d628,
+        type: 3}
+      propertyPath: m_Name
+      value: SleepAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 501390808638444872, guid: debc85a53b756fb448054e8170a9d628,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 501390808638444874, guid: debc85a53b756fb448054e8170a9d628,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debc85a53b756fb448054e8170a9d628, type: 3}
 --- !u!4 &1477019851796323424 stripped
@@ -580,16 +585,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 6703304076158240014, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
-        type: 3}
-      propertyPath: m_Name
-      value: HouseRadialAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703304076158240014, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6703304076158240011, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -645,6 +640,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6703304076158240014, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
+        type: 3}
+      propertyPath: m_Name
+      value: HouseRadialAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703304076158240014, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703304076158240012, guid: c73f9bc5a48e7fd4b93c195573e5f7bc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73f9bc5a48e7fd4b93c195573e5f7bc, type: 3}
 --- !u!4 &8864418875902279877 stripped
@@ -660,16 +670,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 1856508092238643418, guid: 3089b698471bea5429a151888e1d0190,
-        type: 3}
-      propertyPath: m_Name
-      value: MunchAnim
-      objectReference: {fileID: 0}
-    - target: {fileID: 1856508092238643418, guid: 3089b698471bea5429a151888e1d0190,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1856508092238643431, guid: 3089b698471bea5429a151888e1d0190,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,6 +725,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1856508092238643418, guid: 3089b698471bea5429a151888e1d0190,
+        type: 3}
+      propertyPath: m_Name
+      value: MunchAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856508092238643418, guid: 3089b698471bea5429a151888e1d0190,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856508092238643416, guid: 3089b698471bea5429a151888e1d0190,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3089b698471bea5429a151888e1d0190, type: 3}
 --- !u!4 &5320048414829384361 stripped
@@ -740,16 +755,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -805,15 +810,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -832,16 +847,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -897,15 +902,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -924,16 +939,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 178288094221133604}
     m_Modifications:
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_Name
-      value: RadialButton (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3052058074663296690, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -989,15 +994,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+      propertyPath: m_Name
+      value: RadialButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152264354975311483, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320172705929682528, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
         type: 3}
       propertyPath: buttonType
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277147228224336352, guid: 1a9b02b5e43e15a4cb78c11e38def82f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
