@@ -100,8 +100,9 @@ public class InputManager : MonoBehaviour {
     public void eatHouseClicked(BuildingController controller) {
         if (!controller.beingWorkedOn) {
             int selectedVillagerCount = selectionManager.getSelectedVillagerCount();
-            if (selectedVillagerCount == 1) {
+            if (selectedVillagerCount == 1 && resourceManager.food > 0) {
                 controller.beingWorkedOn = true;
+                resourceManager.adjustResource(ResourceType.Food, -1);
                 List<VillagerMover> movers = selectionManager.getSelectedVillagerMovers();
                 for (int i = 0; i < movers.Count; i++) {
                     movers[i].moveToEat(controller.gameObject.transform.position);
