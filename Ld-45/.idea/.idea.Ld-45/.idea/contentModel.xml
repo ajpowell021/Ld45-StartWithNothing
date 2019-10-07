@@ -35,6 +35,7 @@
           <e p="RockController.cs" t="Include" />
           <e p="SelectionManager.cs" t="Include" />
           <e p="StartButtonController.cs" t="Include" />
+          <e p="TipManager.cs" t="Include" />
           <e p="TreeController.cs" t="Include" />
           <e p="VillagerClicker.cs" t="Include" />
           <e p="VillagerGather.cs" t="Include" />

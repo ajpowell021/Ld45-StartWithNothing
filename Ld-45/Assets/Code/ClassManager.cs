@@ -25,6 +25,7 @@ public class ClassManager : MonoBehaviour {
     public CharacterUiManager characterUiManager;
     public WinManager winManager;
     public GraveyardManager graveyardManager;
+    public TipManager tipManager;
     
     // Init
 
@@ -62,5 +63,6 @@ public class ClassManager : MonoBehaviour {
         characterUiManager = gameObject.GetComponent<CharacterUiManager>();
         winManager = gameObject.GetComponent<WinManager>();
         graveyardManager = gameObject.GetComponent<GraveyardManager>();
+        tipManager = gameObject.GetComponent<TipManager>();
     }
 }

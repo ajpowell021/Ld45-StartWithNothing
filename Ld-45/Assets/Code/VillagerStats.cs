@@ -25,6 +25,7 @@ public class VillagerStats : MonoBehaviour {
     private CharacterUiManager characterUiManager;
     private GraveyardManager graveyardManager;
     private SpriteRenderer sr;
+    private TipManager tipManager;
     
     // Init
 
@@ -39,6 +40,7 @@ public class VillagerStats : MonoBehaviour {
         dataHolder = ClassManager.instance.dataHolder;
         characterUiManager = ClassManager.instance.characterUiManager;
         graveyardManager = ClassManager.instance.graveyardManager;
+        tipManager = ClassManager.instance.tipManager;
     }
 
     // Update
@@ -97,6 +99,7 @@ public class VillagerStats : MonoBehaviour {
             dead = true;
             setSelected(false);
             characterUiManager.died(id);
+            tipManager.addNewTip("A villager starved!");
         }
     }
 
@@ -105,12 +108,13 @@ public class VillagerStats : MonoBehaviour {
             characterUiManager.setSleepIcon(id, true);
         }
 
-        if (hungerLevel > 5) {
+        if (sleepLevel > 5) {
             graveyardManager.died(gameObject);
             sr.enabled = false;
             dead = true;
             setSelected(false);
             characterUiManager.died(id);
+            tipManager.addNewTip("A villager died of exhaustion!");
         }
     }
 }
