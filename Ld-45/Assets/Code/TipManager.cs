@@ -14,6 +14,8 @@ public class TipManager : MonoBehaviour {
     private TextMeshProUGUI botText;
     private TextMeshProUGUI topText;
 
+    private SoundManager soundManager;
+
     private void Awake() {
         botText = bottomTip.GetComponentInChildren<TextMeshProUGUI>();
         topText = topTip.GetComponentInChildren<TextMeshProUGUI>();
@@ -23,6 +25,7 @@ public class TipManager : MonoBehaviour {
     }
 
     private void Start() {
+        soundManager = ClassManager.instance.soundManager;
         addNewTip("You eat and sleep at houses");
         StartCoroutine(buildAHouse());
     }
@@ -30,6 +33,7 @@ public class TipManager : MonoBehaviour {
     // Public Functions
 
     public void addNewTip(string message) {
+        soundManager.playWhistleSound();
         tipCount++;
         if (tipCount > 2) {
             topText.text = botText.text;

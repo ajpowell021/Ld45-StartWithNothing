@@ -19,6 +19,8 @@ public class CharacterClickerUi : MonoBehaviour {
     
     private Vector3 outPosition;
     private Vector3 inPosition;
+
+    private SoundManager soundManager;
     
     // Classes
 
@@ -40,6 +42,7 @@ public class CharacterClickerUi : MonoBehaviour {
 
     private void Start() {
         selectionManager = ClassManager.instance.selectionManager;
+        soundManager = ClassManager.instance.soundManager;
         StartCoroutine(setPositions());
     }
 
@@ -70,9 +73,11 @@ public class CharacterClickerUi : MonoBehaviour {
     private void setDestination() {
         if (state == SlideState.In) {
             destination = inPosition;
+            soundManager.playSlideBackSound();
         }
         else if (state == SlideState.Out) {
             destination = outPosition;
+            soundManager.playSlideFrontSound();
         }
         else {
             destination = transform.position;
