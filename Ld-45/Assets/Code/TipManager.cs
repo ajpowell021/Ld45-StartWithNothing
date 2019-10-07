@@ -54,5 +54,11 @@ public class TipManager : MonoBehaviour {
     private IEnumerator chopAndCut() {
         yield return new WaitForSeconds(10);
         addNewTip("Trees and rocks are useful");
+        StartCoroutine(fishing());
+    }
+
+    private IEnumerator fishing() {
+        yield return new WaitForSeconds(10);
+        addNewTip("This game has fishing!");
     }
 }
