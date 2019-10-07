@@ -29,6 +29,7 @@ public class RadialButtonController : MonoBehaviour {
     private InputManager inputManager;
 
     private BuildingController buildingController;
+    private SelectionManager selectionManager;
 
     private void Awake() {
         if (buttonType != Button.Fish) {
@@ -38,6 +39,7 @@ public class RadialButtonController : MonoBehaviour {
 
     private void Start() {
         inputManager = ClassManager.instance.inputManager;
+        selectionManager = ClassManager.instance.selectionManager;
     }
 
     public void OnMouseDown() {
@@ -47,6 +49,7 @@ public class RadialButtonController : MonoBehaviour {
             case Button.DemolishHouse:
             case Button.DemolishFarm:
                 if (!buildingController.beingWorkedOn) {
+                    selectionManager.unselectAllBuildings();
                     Destroy(gameObject.transform.parent.gameObject);    
                 }
                 break;

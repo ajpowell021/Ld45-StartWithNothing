@@ -159,10 +159,12 @@ public class BuildingController : MonoBehaviour {
         if (!(buildingType == BuildingType.House && beingWorkedOn)) {
             if (selected) {
                 toggleBuildingSelect();
+                selectionManager.turnOnAllBuildingHitBoxes();
             }
             else {
                 selectionManager.unselectAllBuildings();
                 toggleBuildingSelect();
+                selectionManager.turnOffHitBoxOfOtherBuildings();
             }
             inputManager.setInputMode(!selected ? InputMode.PeopleControl : InputMode.BuidlingSelected);    
         }

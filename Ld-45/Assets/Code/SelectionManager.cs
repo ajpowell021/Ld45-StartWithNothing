@@ -80,6 +80,8 @@ public class SelectionManager : MonoBehaviour {
         for (int i = 0; i < buildings.Count; i++) {
             buildings[i].GetComponent<BuildingController>().unselect();
         }
+        
+        turnOnAllBuildingHitBoxes();
     }
 
     public void selectVillagerById(int id) {
@@ -116,6 +118,32 @@ public class SelectionManager : MonoBehaviour {
 
         Debug.LogError("NO PERSON OF THIS ID FOUND");
         return people[0];
+    }
+
+    public void turnOffHitBoxOfOtherBuildings() {
+        List<GameObject> buildings = GameObject.FindGameObjectsWithTag("Building").ToList();
+        for (int i = 0; i < buildings.Count; i++) {
+            if (!buildings[i].GetComponent<BuildingController>().selected) {
+                buildings[i].GetComponent<BoxCollider>().enabled = false;
+            }
+        }
+
+        List<GameObject> buildingSites = GameObject.FindGameObjectsWithTag("BuildingSite").ToList();
+        for (int i = 0; i < buildingSites.Count; i++) {
+            buildingSites[i].GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    public void turnOnAllBuildingHitBoxes() {
+        List<GameObject> buildings = GameObject.FindGameObjectsWithTag("Building").ToList();
+        for (int i = 0; i < buildings.Count; i++) {
+            buildings[i].GetComponent<BoxCollider>().enabled = true;
+        }
+        
+        List<GameObject> buildingSites = GameObject.FindGameObjectsWithTag("BuildingSite").ToList();
+        for (int i = 0; i < buildingSites.Count; i++) {
+            buildingSites[i].GetComponent<BoxCollider>().enabled = true;
+        }
     }
 
     public List<VillagerStats> getAllVillagerStatsInBounds(Vector3 firstCorner, Vector3 secondCorner) {
