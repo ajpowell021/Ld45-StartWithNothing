@@ -21,4 +21,9 @@ public class DataHolder : MonoBehaviour {
     public float timeBetweenBoats;
     public float timeBetweenHunger;
     public float timeBetweenTired;
+
+    public int woodToWin;
+    public int cottonToWin;
+    public int stoneToWin;
+    public int foodToWin;
 }

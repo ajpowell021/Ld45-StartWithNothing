@@ -15,6 +15,7 @@
           <e p="CharacterClickerUi.cs" t="Include" />
           <e p="CharacterUiManager.cs" t="Include" />
           <e p="ClassManager.cs" t="Include" />
+          <e p="CrashedBoatDetector.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
           <e p="CursorObjectHitDetector.cs" t="Include" />
           <e p="DataHolder.cs" t="Include" />
@@ -38,6 +39,7 @@
           <e p="VillagerGather.cs" t="Include" />
           <e p="VillagerMover.cs" t="Include" />
           <e p="VillagerStats.cs" t="Include" />
+          <e p="WinManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

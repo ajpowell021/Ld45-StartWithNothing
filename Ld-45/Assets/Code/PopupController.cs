@@ -9,13 +9,18 @@ public class PopupController : MonoBehaviour {
     // Public State
 
     public GameObject popupPanel;
+    public GameObject winConditionPanel;
     private bool showPanel;
+    private bool showWinPanel;
+    private bool won;
     private TextMeshProUGUI text;
-    
+    private TextMeshProUGUI winText;
+
     // Init
 
     private void Awake() {
         text = popupPanel.GetComponentInChildren<TextMeshProUGUI>();
+        winText = winConditionPanel.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     // Update
@@ -26,6 +31,12 @@ public class PopupController : MonoBehaviour {
             position.y += 2;
             position.z = 0;
             popupPanel.transform.position = position;
+        }
+        else if (showWinPanel) {
+            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            position.y += 3;
+            position.z = 0;
+            winConditionPanel.transform.position = position;
         }
     }
     
@@ -40,5 +51,21 @@ public class PopupController : MonoBehaviour {
     public void hidePopup() {
         showPanel = false;
         popupPanel.SetActive(false);
+    }
+
+    public void showWin(string message) {
+        if (!won) {
+            showWinPanel = true;
+            winConditionPanel.SetActive(true);
+            winText.text = message;    
+        }
+    }
+
+    public void hideWin(bool finalHide = false) {
+        if (finalHide) {
+            won = true;
+        }
+        showWinPanel = false;
+        winConditionPanel.SetActive(false);
     }
 }

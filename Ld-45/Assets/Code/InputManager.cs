@@ -49,10 +49,10 @@ public class InputManager : MonoBehaviour {
             }
         } 
         else if (Input.GetKeyDown(KeyCode.P)) {
-            resourceManager.adjustResource(ResourceType.Food, 10);
-            resourceManager.adjustResource(ResourceType.Wood, 10);
-            resourceManager.adjustResource(ResourceType.Stone, 10);
-            resourceManager.adjustResource(ResourceType.Cotton, 10);
+            resourceManager.adjustResource(ResourceType.Food, 100);
+            resourceManager.adjustResource(ResourceType.Wood, 100);
+            resourceManager.adjustResource(ResourceType.Stone, 100);
+            resourceManager.adjustResource(ResourceType.Cotton, 100);
         }
     }
 
