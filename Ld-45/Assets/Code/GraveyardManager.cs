@@ -49,9 +49,11 @@ public class GraveyardManager : MonoBehaviour {
         else if (deaths == 5) {
             losePanel.SetActive(true);
             lost = true;
+            tipManager.addNewTip("Press R to restart");
+            inputManager.setInputMode(InputMode.GameOver);
         }
 
-        if (deaths == currentCharacters) {
+        if (deaths >= currentCharacters) {
             tipManager.addNewTip("Press R to restart");
             losePanel.SetActive(true);
             lost = true;
