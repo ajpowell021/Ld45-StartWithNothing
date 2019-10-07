@@ -52,12 +52,12 @@ public class InputManager : MonoBehaviour {
                     fishingRadialActive = false;
                 }
             } 
-            else if (Input.GetKeyDown(KeyCode.P)) {
-                resourceManager.adjustResource(ResourceType.Food, 100);
-                resourceManager.adjustResource(ResourceType.Wood, 100);
-                resourceManager.adjustResource(ResourceType.Stone, 100);
-                resourceManager.adjustResource(ResourceType.Cotton, 100);
-            }    
+//            else if (Input.GetKeyDown(KeyCode.P)) {
+//                resourceManager.adjustResource(ResourceType.Food, 100);
+//                resourceManager.adjustResource(ResourceType.Wood, 100);
+//                resourceManager.adjustResource(ResourceType.Stone, 100);
+//                resourceManager.adjustResource(ResourceType.Cotton, 100);
+//            }    
         }
         else {
             if (Input.GetKeyDown(KeyCode.R)) {
