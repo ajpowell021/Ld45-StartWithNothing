@@ -21,6 +21,8 @@ public class BuildingController : MonoBehaviour {
     private GameObject radialTwo;
     private GameObject radialThree;
     private GameObject radialAnim;
+    private GameObject sleepAnim;
+    private GameObject munchAnim;
 
     public bool beingWorkedOn;
 
@@ -39,6 +41,10 @@ public class BuildingController : MonoBehaviour {
         radialTwo = gameObject.transform.GetChild(3).gameObject;
         radialThree = gameObject.transform.GetChild(4).gameObject;
         radialAnim = gameObject.transform.GetChild(5).gameObject;
+        if (buildingType == BuildingType.House) {
+            sleepAnim = gameObject.transform.GetChild(6).gameObject;
+            munchAnim = gameObject.transform.GetChild(7).gameObject;
+        }
     }
 
     private void Start() {
@@ -88,6 +94,14 @@ public class BuildingController : MonoBehaviour {
     
     public void updateResourceCountUi() {
         resourceCountObject.GetComponentInChildren<TextMeshProUGUI>().text = currentResourcesHeld + "/" + dataHolder.buildingResourceCapacity;
+    }
+
+    public void setSleeping(bool value) {
+        sleepAnim.SetActive(value);
+    }
+
+    public void setEating(bool value) {
+        munchAnim.SetActive(value);
     }
 
     // On Click

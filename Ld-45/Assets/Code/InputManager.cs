@@ -92,6 +92,7 @@ public class InputManager : MonoBehaviour {
                 selectionManager.unselectAllVillagers();
                 characterUiManager.unselectAll();
                 selectionManager.unselectAllBuildings();
+                controller.setSleeping(true);
             }    
         }
     }
@@ -109,6 +110,7 @@ public class InputManager : MonoBehaviour {
                 selectionManager.unselectAllVillagers();
                 characterUiManager.unselectAll();
                 selectionManager.unselectAllBuildings();
+                controller.setEating(true);
             }     
         }
     }

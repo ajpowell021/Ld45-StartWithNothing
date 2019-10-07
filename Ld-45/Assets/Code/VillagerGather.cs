@@ -245,6 +245,8 @@ public class VillagerGather : MonoBehaviour {
     private void doneEatingSleeping() {
         spriteRenderer.enabled = true;
         buildingController.beingWorkedOn = false;
+        buildingController.setEating(false);
+        buildingController.setSleeping(false);
         sleeping = false;
         eating = false;
     }

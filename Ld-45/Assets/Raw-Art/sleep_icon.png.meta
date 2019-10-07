@@ -1,37 +1,25 @@
 fileFormatVersion: 2
-guid: 2b08cd3f601af1b41845e1473eeeedb6
+guid: 8d1c8a4884f7d90438475a87f34788d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2858994714303699961
-    second: mine_radial_0
+      213: -2710201374819225376
+    second: sleep_icon_0
   - first:
-      213: 1473132444025398961
-    second: mine_radial_1
+      213: 5995803723681727983
+    second: sleep_icon_1
   - first:
-      213: -2919056286459761694
-    second: mine_radial_2
+      213: -7650774871881486636
+    second: sleep_icon_2
   - first:
-      213: 1211930384692585842
-    second: mine_radial_3
+      213: -2708047498586679880
+    second: sleep_icon_3
   - first:
-      213: 3115962911610807966
-    second: mine_radial_4
+      213: 3745674593067713462
+    second: sleep_icon_4
   - first:
-      213: -46599384395954645
-    second: mine_radial_5
-  - first:
-      213: -3753116988905977661
-    second: mine_radial_6
-  - first:
-      213: 1488844492429453195
-    second: mine_radial_7
-  - first:
-      213: -298407183394764442
-    second: mine_radial_8
-  - first:
-      213: 1885302126037191080
-    second: mine_radial_9
+      213: -3533098098631319693
+    second: sleep_icon_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mine_radial_0
+      name: sleep_icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89de35fa772570e4695d8bcf5577bdbf
-      internalID: -2858994714303699961
+      spriteID: f3c2c870817a7934180cb50c4d5ac14f
+      internalID: -2710201374819225376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mine_radial_1
+      name: sleep_icon_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 16
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f36e83951b46f43888e69b6b02af53
-      internalID: 1473132444025398961
+      spriteID: 81269441b75a740498cf5acd1082494a
+      internalID: 5995803723681727983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mine_radial_2
+      name: sleep_icon_2
       rect:
         serializedVersion: 2
-        x: 94
+        x: 32
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f091d7abebe87d4bbe4c11030c7d4bc
-      internalID: -2919056286459761694
+      spriteID: 481bad87d0804ad44acf3514bc994aed
+      internalID: -7650774871881486636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mine_radial_3
+      name: sleep_icon_3
       rect:
         serializedVersion: 2
-        x: 141
+        x: 48
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67b57171f7ac3ff4e93cc42ae2d128fa
-      internalID: 1211930384692585842
+      spriteID: ce56c182f43f68443bed6cfa8b45c031
+      internalID: -2708047498586679880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mine_radial_4
+      name: sleep_icon_4
       rect:
         serializedVersion: 2
-        x: 188
+        x: 64
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 880cd52bd12de144a80cc1c48e1f6b33
-      internalID: 3115962911610807966
+      spriteID: 85ad5520b06dc18459fc7e0b5a1568ac
+      internalID: 3745674593067713462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mine_radial_5
+      name: sleep_icon_5
       rect:
         serializedVersion: 2
-        x: 235
+        x: 80
         y: 0
-        width: 47
-        height: 23
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,92 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b28e66597a8231a42bfbcdd44bf63543
-      internalID: -46599384395954645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mine_radial_6
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 0
-        width: 47
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a486a4a1716fb0428ed2d6a3c21f2dc
-      internalID: -3753116988905977661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mine_radial_7
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 0
-        width: 47
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c9d1d54b49455948916fc6149a9ed97
-      internalID: 1488844492429453195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mine_radial_8
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 0
-        width: 47
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d04a797c852c93c4c8c7de75a5b96e2a
-      internalID: -298407183394764442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mine_radial_9
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 0
-        width: 47
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef9baa91218d62b4eb542bc60068b150
-      internalID: 1885302126037191080
+      spriteID: 5f6fc85f7c61d1a43b97cad472dce5af
+      internalID: -3533098098631319693
       vertices: []
       indices: 
       edges: []
