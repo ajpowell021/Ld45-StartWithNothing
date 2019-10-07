@@ -5130,7 +5130,7 @@ MonoBehaviour:
   villagerSpeed: 6
   buildingResourceGatheringSpeed: 6
   buildingResourceCapacity: 10
-  workerGatherTime: 2
+  workerGatherTime: 1
   fishingTime: 7
   mouseDragCooldown: 0.2
   treeWoodStart: 6

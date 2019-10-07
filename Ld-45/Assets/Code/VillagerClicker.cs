@@ -36,6 +36,7 @@ public class VillagerClicker : MonoBehaviour {
             else if (inputManager.inputMode == InputMode.BuidlingSelected) {
                 selectionManager.unselectAllBuildings();
                 villagerStats.toggleSelected();
+                inputManager.setInputMode(InputMode.PeopleControl);
             }   
             characterUiManager.characterSelected(villagerStats.id, villagerStats.selected);
         }

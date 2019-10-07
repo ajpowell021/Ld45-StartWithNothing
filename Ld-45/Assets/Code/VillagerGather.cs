@@ -150,12 +150,10 @@ public class VillagerGather : MonoBehaviour {
         else if (building) {
             if (Time.time > timeBuildingStarted + dataHolder.workerGatherTime) {
                 // Finish a round of building
+                timeBuildingStarted = Time.time;
+                buildingSiteController.doWork();
                 if (buildingSiteController.donePercent == 100) {
                     doneBuilding();
-                }
-                else {
-                    timeBuildingStarted = Time.time;
-                    buildingSiteController.doWork();
                 }
             }
         }
