@@ -19,6 +19,8 @@ public class RandomResourceSpawner : MonoBehaviour {
         prefabManager = ClassManager.instance.prefabManager;
         spawnTreesAtStart();
         spawnBouldersAtStart();
+        
+        InvokeRepeating("resourceCheck", 60f, 60f);
     }
 
     // top: 8
@@ -40,6 +42,34 @@ public class RandomResourceSpawner : MonoBehaviour {
 
     public void spawnBouldersAtStart() {
         for (int i = 0; i < treesToSpawnAtStart; i++) {
+            List<Vector3> emptySpots = getListOfEmptySpots();
+            int roll = Random.Range(0, emptySpots.Count);
+            GameObject rock = Instantiate(prefabManager.rockOne, emptySpots[roll], Quaternion.identity);
+            rock.GetComponent<SpriteRenderer>().sprite = prefabManager.getRandomRockSprite();
+        }
+    }
+
+    public int getTreeCount() {
+        List<GameObject> trees = GameObject.FindGameObjectsWithTag("Tree").ToList();
+        return trees.Count;
+    }
+    
+    public int getBoulderCount() {
+        List<GameObject> boulders = GameObject.FindGameObjectsWithTag("Boulder").ToList();
+        return boulders.Count;
+    }
+
+    private void resourceCheck() {
+        int treesToSpawn = treesToSpawnAtStart - getTreeCount();
+        for (int i = 0; i < treesToSpawn; i++) {
+            List<Vector3> emptySpots = getListOfEmptySpots();
+            int roll = Random.Range(0, emptySpots.Count);
+            GameObject tree = Instantiate(prefabManager.treeZero, emptySpots[roll], Quaternion.identity);
+            tree.GetComponent<SpriteRenderer>().sprite = prefabManager.getRandomTreeSprite();
+        }
+
+        int bouldersToSpawn = treesToSpawnAtStart - getBoulderCount();
+        for (int i = 0; i < bouldersToSpawn; i++) {
             List<Vector3> emptySpots = getListOfEmptySpots();
             int roll = Random.Range(0, emptySpots.Count);
             GameObject rock = Instantiate(prefabManager.rockOne, emptySpots[roll], Quaternion.identity);

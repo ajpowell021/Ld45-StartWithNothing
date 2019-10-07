@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b877a66-dc29-4f8a-95bb-24467db92897" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GraveyardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GraveyardManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,27 +214,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Code/BuildingSiteController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-              <folding>
-                <marker date="1570465779617" expanded="true" signature="6:92" ph="..." />
-                <marker date="1570465779617" expanded="true" signature="146:1541" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="464:611" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="638:765" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="849:1057" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="1094:1247" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="1274:1452" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="1335:1378" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="1378:1446" ph="{...}" />
-                <marker date="1570465779617" expanded="true" signature="1484:1539" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Code/GraveyardManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="469">
@@ -251,6 +230,36 @@
                 <marker date="1570472220074" expanded="true" signature="1082:1128" ph="{...}" />
                 <marker date="1570472220074" expanded="true" signature="1159:1349" ph="{...}" />
                 <marker date="1570472220074" expanded="true" signature="1392:1582" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <folding>
+                <marker date="1570477277668" expanded="true" signature="6:146" ph="..." />
+                <marker date="1570477277668" expanded="true" signature="199:6958" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="343:533" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="539:598" ph="/* top: 8 ... */" />
+                <marker date="1570477277668" expanded="true" signature="662:1055" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="718:1049" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1096:1488" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1152:1482" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1520:1640" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1679:1808" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1843:2747" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="1957:2288" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="2411:2741" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="2827:3700" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="3303:3381" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="3428:3550" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="3471:3540" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="3606:3666" ph="{...}" />
+                <marker date="1570477277668" expanded="true" signature="3744:6956" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -468,7 +477,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/TreeClicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TreeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/RockController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/HudController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/StartButtonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/RaftController.cs" />
@@ -500,14 +508,15 @@
         <option value="$PROJECT_DIR$/Assets/Code/SelectionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/RadialButtonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GraveyardManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="81" />
-    <option name="y" value="-9" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1076" />
-    <option name="height" value="1080" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -565,12 +574,12 @@
       <workItem from="1570227761858" duration="6130000" />
       <workItem from="1570286395391" duration="33872000" />
       <workItem from="1570373365246" duration="12331000" />
-      <workItem from="1570454941551" duration="9954000" />
+      <workItem from="1570454941551" duration="11690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93917000" />
+    <option name="totallyTimeSpent" value="95653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -738,29 +747,6 @@
             <marker date="1570309425631" expanded="true" signature="2719:2898" ph="{...}" />
             <marker date="1570309425631" expanded="true" signature="2743:2892" ph="{...}" />
             <marker date="1570309425631" expanded="true" signature="2978:3129" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="95" />
-          <folding>
-            <marker date="1570330232740" expanded="true" signature="6:146" ph="..." />
-            <marker date="1570330232740" expanded="true" signature="199:5638" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="343:472" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="478:537" ph="/* top: 8 ... */" />
-            <marker date="1570330232740" expanded="true" signature="601:994" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="657:988" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="1035:1427" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="1091:1421" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="1507:2380" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="1983:2061" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="2108:2230" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="2151:2220" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="2286:2346" ph="{...}" />
-            <marker date="1570330232740" expanded="true" signature="2424:5636" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1489,6 +1475,34 @@
             <marker date="1570472220074" expanded="true" signature="1082:1128" ph="{...}" />
             <marker date="1570472220074" expanded="true" signature="1159:1349" ph="{...}" />
             <marker date="1570472220074" expanded="true" signature="1392:1582" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Code/RandomResourceSpawner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <marker date="1570477277668" expanded="true" signature="6:146" ph="..." />
+            <marker date="1570477277668" expanded="true" signature="199:6958" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="343:533" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="539:598" ph="/* top: 8 ... */" />
+            <marker date="1570477277668" expanded="true" signature="662:1055" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="718:1049" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1096:1488" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1152:1482" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1520:1640" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1679:1808" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1843:2747" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="1957:2288" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="2411:2741" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="2827:3700" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="3303:3381" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="3428:3550" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="3471:3540" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="3606:3666" ph="{...}" />
+            <marker date="1570477277668" expanded="true" signature="3744:6956" ph="{...}" />
           </folding>
         </state>
       </provider>
