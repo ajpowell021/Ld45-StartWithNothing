@@ -19,6 +19,9 @@ public class VillagerMover : MonoBehaviour {
     private bool onWayToGather;
     private bool onWayToSleep;
     private bool onWayToEat;
+    private bool onWayToFish;
+
+    public bool fishingToRight;
     
     // Init 
 
@@ -52,6 +55,7 @@ public class VillagerMover : MonoBehaviour {
             destination = newDestination;
         }
         else {
+            onWayToFish = true;
             destination = getOceanDestination(newDestination);
         }
 
@@ -107,6 +111,10 @@ public class VillagerMover : MonoBehaviour {
                 gatherScript.arrivedAtSleep();
                 onWayToSleep = false;
             }
+            else if (onWayToFish) {
+                gatherScript.arrivedAtFishing();
+                onWayToFish = false;
+            }
         }
     }
 
@@ -114,6 +122,7 @@ public class VillagerMover : MonoBehaviour {
         Vector3 returnPosition = new Vector3();
         if (position.x > -1.5f) {
             // Right side
+            fishingToRight = true;
             if (position.y > 7.29) {
                 returnPosition = new Vector3(.66f, 7.29f, 0);
             }
@@ -150,6 +159,7 @@ public class VillagerMover : MonoBehaviour {
         }
         else {
             // Left side
+            fishingToRight = false;
             if (position.y > 6.3f) {
                 returnPosition = new Vector3(-4.59f, 6.3f, 0);
             }

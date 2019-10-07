@@ -19,6 +19,7 @@ public class VillagerGather : MonoBehaviour {
     public bool choppingTree;
     public bool sleeping;
     public bool eating;
+    public bool fishing;
     public bool hittingRock;
     public bool enrouteToBuilding;
     public bool enrouteToTree;
@@ -32,7 +33,8 @@ public class VillagerGather : MonoBehaviour {
     private ResourceManager resourceManager;
     private VillagerStats stats;
     private SpriteRenderer spriteRenderer;
-
+    private VillagerMover mover;
+    
     // Init
 
     private void Awake() {
@@ -41,6 +43,7 @@ public class VillagerGather : MonoBehaviour {
         stats = gameObject.GetComponent<VillagerStats>();
         progressBarObject = gameObject.transform.GetChild(1).gameObject;
         progressBar = progressBarObject.GetComponent<ProgressBar>();
+        mover = gameObject.GetComponent<VillagerMover>();
     }
 
     private void Start() {
@@ -67,6 +70,32 @@ public class VillagerGather : MonoBehaviour {
                 else {
                     timeGatheringStarted = Time.time;
                     buildingController.currentResourcesHeld--;
+                }
+            }
+        }
+        else if (fishing) {
+
+            // Set progress bar
+            float percent = (1 - (timeGatheringStarted + dataHolder.fishingTime - Time.time) / 2) * 100;
+            progressBar.setPercent(Mathf.RoundToInt(percent));
+            
+            if (Time.time > timeGatheringStarted + dataHolder.fishingTime) {
+                // Caught a fish
+                resourceManager.adjustResource(ResourceType.Food, 1);
+                animator.SetBool("fishing", false);
+                fishing = false;
+                progressBarObject.SetActive(false);
+                
+                spriteRenderer.flipX = false;
+                if (mover.fishingToRight) {
+                    Vector3 newPosition = gameObject.transform.position;
+                    newPosition.x -= 1;
+                    gameObject.transform.position = newPosition;    
+                }
+                else {
+                    Vector3 newPosition = gameObject.transform.position;
+                    newPosition.x += 1;
+                    gameObject.transform.position = newPosition; 
                 }
             }
         }
@@ -219,6 +248,26 @@ public class VillagerGather : MonoBehaviour {
         spriteRenderer.enabled = false;
         // Play sleep anim for house.
         stats.setSelected(false);
+    }
+
+    public void arrivedAtFishing() {
+        fishing = true;
+        timeGatheringStarted = Time.time;
+        animator.SetBool("fishing", true);
+        if (mover.fishingToRight) {
+            spriteRenderer.flipX = false;
+            Vector3 newPosition = gameObject.transform.position;
+            newPosition.x += 1;
+            gameObject.transform.position = newPosition;
+        }
+        else {
+            spriteRenderer.flipX = true;
+            Vector3 newPosition = gameObject.transform.position;
+            newPosition.x -= 1;
+            gameObject.transform.position = newPosition;
+        }
+        stats.setSelected(false);
+        progressBarObject.SetActive(true);
     }
 
     public bool isWorkerBusy() {
